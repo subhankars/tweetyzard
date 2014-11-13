@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Friendship_GetRelationship" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/friendships/show.json?{0}&amp;{1}</value>
+    <comment>Friendship - {0} : source parameter - {1} : target parameter</comment>
+  </data>
+  <data name="Friendship_GetRelationships" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/friendships/lookup.json?{0}</value>
+    <comment>Friendship - {0} : sources parameter</comment>
+  </data>
+  <data name="List_Create" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/lists/create.json?name={0}&amp;mode={1}</value>
+  </data>
+  <data name="List_Create_DescriptionParameter" xml:space="preserve">
+    <value>&amp;description={0}</value>
+  </data>
+  <data name="List_GetExistingList" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/lists/show.json?{0}</value>
+    <comment>{0} is ListIdentifier</comment>
+  </data>
+  <data name="Message_GetMessageFromId" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/direct_messages/show.json?id={0}</value>
+    <comment>Message</comment>
+  </data>
+  <data name="SavedSearch_Create" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/saved_searches/create.json?query={0}</value>
+  </data>
+  <data name="SavedSearch_Get" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/saved_searches/show/{0}.json</value>
+  </data>
+  <data name="TokenUser_GetCurrentUser" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/account/verify_credentials.json</value>
+  </data>
+  <data name="Tweet_Get" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/statuses/show.json?id={0}&amp;include_my_retweet=true</value>
+  </data>
+  <data name="User_GetUserFromId" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/users/show.json?user_id={0}</value>
+  </data>
+  <data name="User_GetUserFromName" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/users/show.json?screen_name={0}</value>
+  </data>
+  <data name="User_GetUsersFromIds" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/users/lookup.json?user_id={0}</value>
+  </data>
+  <data name="User_GetUsersFromNames" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/users/lookup.json?screen_name={0}</value>
+    <comment>User</comment>
+  </data>
+</root>

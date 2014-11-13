@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2DA9C20D-E072-4152-BEEE-11FEAFF61E0F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TweetinviCore</RootNamespace>
+    <AssemblyName>TweetinviCore</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.Unity, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Unity.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.8\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Enum\DistanceMeasure.cs" />
+    <Compile Include="Enum\HttpMethod.cs" />
+    <Compile Include="Enum\Language.cs" />
+    <Compile Include="Enum\PlaceType.cs" />
+    <Compile Include="Enum\PrivacyMode.cs" />
+    <Compile Include="Enum\SearchResultType.cs" />
+    <Compile Include="Events\Delegates.cs" />
+    <Compile Include="Events\EventArguments\DisconnectMessageEventArgs.cs" />
+    <Compile Include="Events\EventArguments\ExceptionEventArgs.cs" />
+    <Compile Include="Events\EventArguments\LimitReachedEventArgs.cs" />
+    <Compile Include="Events\EventArguments\ListEventArgs.cs" />
+    <Compile Include="Events\EventArguments\MessageEventArgs.cs" />
+    <Compile Include="Events\EventArguments\TweetEventArgs.cs" />
+    <Compile Include="Events\EventArguments\UnmanagedMessageReceivedEventArgs.cs" />
+    <Compile Include="Events\EventArguments\UserEventArgs.cs" />
+    <Compile Include="Events\EventArguments\WarningMessageEventArgs.cs" />
+    <Compile Include="Events\EventHelpers.cs" />
+    <Compile Include="Events\EventArguments\GenericEventArgs.cs" />
+    <Compile Include="Events\UserStreamEvent.cs" />
+    <Compile Include="Exceptions\ITwitterException.cs" />
+    <Compile Include="Exceptions\ITwitterExceptionInfo.cs" />
+    <Compile Include="Extensions\DictionaryExtension.cs" />
+    <Compile Include="Extensions\LanguageExtension.cs" />
+    <Compile Include="Extensions\ExceptionUtils.cs" />
+    <Compile Include="Extensions\IEnumerableExtension.cs" />
+    <Compile Include="Extensions\StringExtension.cs" />
+    <Compile Include="Extensions\StringFormater.cs" />
+    <Compile Include="Helpers\ITwitterStringFormatter.cs" />
+    <Compile Include="Helpers\IWebDownloader.cs" />
+    <Compile Include="Helpers\IJsonObjectConverter.cs" />
+    <Compile Include="Helpers\IJsonTwitterConverterRepository.cs" />
+    <Compile Include="Helpers\IWebHelper.cs" />
+    <Compile Include="Interfaces\Controllers\IAccountController.cs" />
+    <Compile Include="Interfaces\Controllers\IFriendshipController.cs" />
+    <Compile Include="Interfaces\Controllers\IGeoController.cs" />
+    <Compile Include="Interfaces\Controllers\IHelperController.cs" />
+    <Compile Include="Interfaces\Controllers\IMessageController.cs" />
+    <Compile Include="Interfaces\Controllers\ISavedSearchController.cs" />
+    <Compile Include="Interfaces\Controllers\ITimelineController.cs" />
+    <Compile Include="Interfaces\Controllers\ITrendsController.cs" />
+    <Compile Include="Interfaces\Controllers\ITweetController.cs" />
+    <Compile Include="Interfaces\Controllers\ITweetListController.cs" />
+    <Compile Include="Interfaces\Controllers\IUserController.cs" />
+    <Compile Include="Interfaces\Credentials\QueryDTO\IUserCursorQueryResultDTO.cs" />
+    <Compile Include="Interfaces\DTO\ITweetDeletedInfo.cs" />
+    <Compile Include="Interfaces\DTO\IDisconnectMessage.cs" />
+    <Compile Include="Interfaces\DTO\ISavedSearchDTO.cs" />
+    <Compile Include="Interfaces\DTO\ITweetLocationRemovedInfo.cs" />
+    <Compile Include="Interfaces\DTO\ITweetWitheldInfo.cs" />
+    <Compile Include="Interfaces\DTO\IUserWitheldInfo.cs" />
+    <Compile Include="Interfaces\DTO\IMessageDTO.cs" />
+    <Compile Include="Interfaces\DTO\IOembedTweetDTO.cs" />
+    <Compile Include="Interfaces\DTO\IRelationshipDTO.cs" />
+    <Compile Include="Interfaces\DTO\ITweetDTO.cs" />
+    <Compile Include="Interfaces\DTO\IRelationshipStateDTO.cs" />
+    <Compile Include="Interfaces\DTO\ITweetListDTO.cs" />
+    <Compile Include="Interfaces\DTO\IUserDTO.cs" />
+    <Compile Include="Interfaces\DTO\IUserIdDTO.cs" />
+    <Compile Include="Interfaces\DTO\IAccountSettingsDTO.cs" />
+    <Compile Include="Interfaces\Exceptions\IExceptionHandler.cs" />
+    <Compile Include="Interfaces\Factories\ICredentialsFactory.cs" />
+    <Compile Include="Interfaces\Factories\IFriendshipFactory.cs" />
+    <Compile Include="Interfaces\Factories\IGeoFactory.cs" />
+    <Compile Include="Interfaces\Factories\IMessageFactory.cs" />
+    <Compile Include="Interfaces\Factories\ISavedSearchFactory.cs" />
+    <Compile Include="Interfaces\Factories\ITweetFactory.cs" />
+    <Compile Include="Interfaces\Factories\ITweetListFactory.cs" />
+    <Compile Include="Interfaces\Factories\IUnityFactory.cs" />
+    <Compile Include="Interfaces\Factories\IUserFactory.cs" />
+    <Compile Include="Interfaces\ITweetSearchParameters.cs" />
+    <Compile Include="Interfaces\Models\IAccountSettings.cs" />
+    <Compile Include="Interfaces\Models\ICoordinates.cs" />
+    <Compile Include="Interfaces\Models\IFriendshipAuthorizations.cs" />
+    <Compile Include="Interfaces\Models\IGeo.cs" />
+    <Compile Include="Enum\ImageSize.cs" />
+    <Compile Include="Interfaces\Models\IGeoCode.cs" />
+    <Compile Include="Interfaces\Models\IHashTagEntity.cs" />
+    <Compile Include="Interfaces\Models\ILocation.cs" />
+    <Compile Include="Interfaces\Models\IMediaEntity.cs" />
+    <Compile Include="Interfaces\Models\IMediaEntitySize.cs" />
+    <Compile Include="Interfaces\IMention.cs" />
+    <Compile Include="Interfaces\IMessage.cs" />
+    <Compile Include="Interfaces\Models\IOEmbedTweet.cs" />
+    <Compile Include="Interfaces\Models\IPlace.cs" />
+    <Compile Include="Interfaces\IRelationship.cs" />
+    <Compile Include="Interfaces\Models\IPlaceTrends.cs" />
+    <Compile Include="Interfaces\Models\IRelationshipState.cs" />
+    <Compile Include="Interfaces\Models\ISavedSearch.cs" />
+    <Compile Include="Interfaces\Models\ISearchEngine.cs" />
+    <Compile Include="Interfaces\Models\ISuggestedUserList.cs" />
+    <Compile Include="Interfaces\Models\IWarningMessage.cs" />
+    <Compile Include="Interfaces\Models\IWarningMessageFallingBehind.cs" />
+    <Compile Include="Interfaces\Models\TokenRateLimit.cs" />
+    <Compile Include="Interfaces\Models\TokenRateLimits.cs" />
+    <Compile Include="Interfaces\Models\IWarningMessageTooManyFollowers.cs" />
+    <Compile Include="Interfaces\oAuth\IConsumerCredentials.cs" />
+    <Compile Include="Interfaces\Parameters\IListIdentifier.cs" />
+    <Compile Include="Interfaces\Parameters\IListIdentifierFactory.cs" />
+    <Compile Include="Interfaces\Parameters\IListUpdateParameters.cs" />
+    <Compile Include="Interfaces\QueryGenerators\ITweetListQueryParameterGenerator.cs" />
+    <Compile Include="Interfaces\QueryGenerators\IUserQueryParameterGenerator.cs" />
+    <Compile Include="Interfaces\QueryValidators\ITweetListQueryValidator.cs" />
+    <Compile Include="Interfaces\QueryValidators\IUserQueryValidator.cs" />
+    <Compile Include="Interfaces\Streaminvi\IFilteredStream.cs" />
+    <Compile Include="Interfaces\Streaminvi\ISampleStream.cs" />
+    <Compile Include="Interfaces\Streaminvi\IStream.cs" />
+    <Compile Include="Interfaces\Streaminvi\IStreamResultGenerator.cs" />
+    <Compile Include="Interfaces\Streaminvi\IStreamTrackManager.cs" />
+    <Compile Include="Interfaces\Streaminvi\ITrackableStream.cs" />
+    <Compile Include="Interfaces\Streaminvi\ITrackManager.cs" />
+    <Compile Include="Interfaces\Streaminvi\ITrackedStream.cs" />
+    <Compile Include="Interfaces\Streaminvi\ITweetStream.cs" />
+    <Compile Include="Interfaces\Streaminvi\ITwitterStream.cs" />
+    <Compile Include="Interfaces\Streaminvi\IUserStream.cs" />
+    <Compile Include="Interfaces\Credentials\ITemporaryCredentials.cs" />
+    <Compile Include="Interfaces\Credentials\ICredentialsAccessor.cs" />
+    <Compile Include="Interfaces\Credentials\IWebTokenCreator.cs" />
+    <Compile Include="Interfaces\Credentials\ITokenRateLimit.cs" />
+    <Compile Include="Interfaces\Models\ITrendLocation.cs" />
+    <Compile Include="Interfaces\ITweet.cs" />
+    <Compile Include="Interfaces\Models\ITrend.cs" />
+    <Compile Include="Interfaces\Models\ITweetEntities.cs" />
+    <Compile Include="Interfaces\Models\IWoeIdLocation.cs" />
+    <Compile Include="ITweetinviModule.cs" />
+    <Compile Include="Interfaces\ITweetList.cs" />
+    <Compile Include="Interfaces\Models\IUrlEntity.cs" />
+    <Compile Include="Interfaces\IUser.cs" />
+    <Compile Include="Interfaces\Models\IUserMentionEntity.cs" />
+    <Compile Include="Interfaces\Models\IUserSearchEngine.cs" />
+    <Compile Include="Interfaces\oAuth\IOAuthCredentials.cs" />
+    <Compile Include="Interfaces\oAuth\IOAuthQueryGenerator.cs" />
+    <Compile Include="Interfaces\oAuth\IOAuthQueryParameter.cs" />
+    <Compile Include="Interfaces\oAuth\IOAuthToken.cs" />
+    <Compile Include="Interfaces\QueryGenerators\IUserQueryGenerator.cs" />
+    <Compile Include="Interfaces\Streaminvi\IStringAnalyzer.cs" />
+    <Compile Include="Interfaces\Credentials\IRateLimit.cs" />
+    <Compile Include="Interfaces\Credentials\ITokenRateLimits.cs" />
+    <Compile Include="Interfaces\Credentials\ILoggedUser.cs" />
+    <Compile Include="Interfaces\Credentials\ITwitterAccessor.cs" />
+    <Compile Include="Interfaces\Credentials\QueryDTO\IBaseCursorQueryDTO.cs" />
+    <Compile Include="Interfaces\Credentials\QueryDTO\IIdsCursorQueryResultDTO.cs" />
+    <Compile Include="Interfaces\Models\ITimeZone.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Enum\StreamState.cs" />
+    <Compile Include="TweetinviConstants.cs" />
+    <Compile Include="Wrappers\IJConvertWrapper.cs" />
+    <Compile Include="Wrappers\IJObjectStaticWrapper.cs" />
+    <Compile Include="Wrappers\IParameterOverrideWrapper.cs" />
+    <Compile Include="Wrappers\IResolverOverrideWrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

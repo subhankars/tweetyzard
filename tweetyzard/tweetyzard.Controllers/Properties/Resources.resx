@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Friendship_Create" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/friendships/create.json?{0}</value>
+  </data>
+  <data name="Friendship_Destroy" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/friendships/destroy.json?{0}</value>
+  </data>
+  <data name="Friendship_GetIncomingIds" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/friendships/incoming.json?</value>
+  </data>
+  <data name="Friendship_GetOutgoingIds" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/friendships/outgoing.json?</value>
+  </data>
+  <data name="Friendship_Update" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/friendships/update.json?retweets={0}&amp;device={1}&amp;{2}</value>
+  </data>
+  <data name="Messages_GetMessagesSent" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/direct_messages/sent.json?count={0}</value>
+  </data>
+  <data name="Message_DestroyMessage" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/direct_messages/destroy.json?id={0}</value>
+  </data>
+  <data name="Message_GetMessagesReceived" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/direct_messages.json?count={0}</value>
+  </data>
+  <data name="Timeline_GetHomeTimeline" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/statuses/home_timeline.json?include_entities=true&amp;count={0}&amp;exclude_replies={1}</value>
+  </data>
+  <data name="Timeline_GetMentionsTimeline" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/statuses/mentions_timeline.json?include_entities=true&amp;count={0}&amp;exclude_replies={1}</value>
+  </data>
+  <data name="Timeline_GetUserTimeline" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/statuses/user_timeline.json?include_entities=true&amp;count={0}&amp;exclude_replies={1}</value>
+  </data>
+  <data name="Tweet_Destroy" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/statuses/destroy/{0}.json</value>
+  </data>
+  <data name="Tweet_Favorite_Create" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/favorites/create.json?id={0}</value>
+  </data>
+  <data name="Tweet_Favorite_Destroy" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/favorites/destroy.json?id={0}</value>
+  </data>
+  <data name="Tweet_GenerateOEmbed" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/statuses/oembed.json?id={0}</value>
+  </data>
+  <data name="Tweet_Publish" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/statuses/update.json?status={0}&amp;trim_user=true</value>
+  </data>
+  <data name="Tweet_PublishInReplyTo" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/statuses/update.json?status={0}&amp;in_reply_to_status_id={1}&amp;trim_user=true</value>
+  </data>
+  <data name="Tweet_Retweet_GetRetweets" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/statuses/retweets/{0}.json</value>
+  </data>
+  <data name="Tweet_Retweet_Publish" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/statuses/retweet/{0}.json?trim_user=true</value>
+  </data>
+  <data name="User_GetFavourites" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/favorites/list.json?{0}&amp;count={1}</value>
+    <comment>User - {0} : userId or screenName</comment>
+  </data>
+  <data name="User_GetFollowers" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/followers/ids.json?{0}&amp;count={1}</value>
+    <comment>User Follower - {0} : userId or screenName</comment>
+  </data>
+  <data name="User_GetFriends" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/friends/ids.json?{0}&amp;count={1}</value>
+    <comment>User Friend - {0} : userId or screenName</comment>
+  </data>
+  <data name="Message_NewMessage" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/direct_messages/new.json?text={0}&amp;{1}</value>
+  </data>
+  <data name="Account_GetSettings" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/account/settings.json</value>
+  </data>
+  <data name="Geo_GetPlaceFromId" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/geo/id/{0}.json</value>
+  </data>
+  <data name="Trends_GetTrendsFromWoeId" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/trends/place.json?id={0}</value>
+  </data>
+  <data name="Help_GetRateLimit" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/application/rate_limit_status.json</value>
+  </data>
+  <data name="Help_GetTwitterPrivacyPolicy" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/help/privacy.json</value>
+  </data>
+  <data name="SavedSearches_GetList" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/saved_searches/list.json</value>
+  </data>
+  <data name="SavedSearch_Destroy" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/saved_searches/destroy/{0}.json</value>
+  </data>
+  <data name="QueryParameter_Count" xml:space="preserve">
+    <value>&amp;count={0}</value>
+  </data>
+  <data name="SearchParameter_GeoCode" xml:space="preserve">
+    <value>&amp;geocode={0}%2C{1}%2C{2}{3}</value>
+  </data>
+  <data name="SearchParameter_Lang" xml:space="preserve">
+    <value>&amp;lang={0}</value>
+  </data>
+  <data name="SearchParameter_Locale" xml:space="preserve">
+    <value>&amp;locale={0}</value>
+  </data>
+  <data name="QueryParameter_MaxId" xml:space="preserve">
+    <value>&amp;max_id={0}</value>
+  </data>
+  <data name="SearchParameter_ResultType" xml:space="preserve">
+    <value>&amp;result_type={0}</value>
+  </data>
+  <data name="QueryParameter_SinceId" xml:space="preserve">
+    <value>&amp;since_id={0}</value>
+  </data>
+  <data name="SearchParameter_Until" xml:space="preserve">
+    <value>&amp;until={0}</value>
+  </data>
+  <data name="Search_SearchTweets" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/search/tweets.json?q={0}</value>
+  </data>
+  <data name="Geo_PlaceIdParameter" xml:space="preserve">
+    <value>place_id={0}</value>
+  </data>
+  <data name="Geo_CoordinatesParameter" xml:space="preserve">
+    <value>long={0}&amp;lat={1}</value>
+  </data>
+  <data name="List_Update" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/lists/update.json?{0}</value>
+    <comment>{0} = listIdentifier</comment>
+  </data>
+  <data name="List_DescriptionParameter" xml:space="preserve">
+    <value>&amp;description={0}</value>
+  </data>
+  <data name="List_Destroy" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/lists/destroy.json?{0}</value>
+    <comment>{0} = listIdentifier</comment>
+  </data>
+  <data name="List_OwnerScreenNameParameter" xml:space="preserve">
+    <value>&amp;owner_screen_name={0}</value>
+  </data>
+  <data name="List_OwnerIdParameter" xml:space="preserve">
+    <value>&amp;owner_id={0}</value>
+  </data>
+  <data name="User_Block_Create" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/blocks/create.json?{0}</value>
+    <comment>User to block {0} : userId or screenName</comment>
+  </data>
+  <data name="List_GetUserLists" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/lists/list.json?{0}&amp;reverse={1}</value>
+  </data>
+  <data name="List_ListIdParameter" xml:space="preserve">
+    <value>&amp;list_id={0}</value>
+  </data>
+  <data name="List_NameParameter" xml:space="preserve">
+    <value>&amp;name={0}</value>
+  </data>
+  <data name="List_PrivacyModeParameter" xml:space="preserve">
+    <value>&amp;mode={0}</value>
+  </data>
+  <data name="List_SlugParameter" xml:space="preserve">
+    <value>&amp;slug={0}</value>
+  </data>
+  <data name="List_GetTweetsFromList" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/lists/statuses.json?{0}</value>
+    <comment>{0} = listIdentifier</comment>
+  </data>
+  <data name="List_Members" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/lists/members.json?{0}</value>
+    <comment>{0} = listIdentifier</comment>
+  </data>
+</root>

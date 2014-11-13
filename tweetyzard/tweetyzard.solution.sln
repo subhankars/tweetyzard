@@ -1,0 +1,174 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tweetyzard", "tweetyzard.winform\tweetyzard.csproj", "{61E11DAF-1119-4E3B-BF0B-FD945E14D0BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tweetinvi", "tweetyzard.Tweetinvi\Tweetinvi.csproj", "{77B3033C-CF28-452D-A9A1-33D90F17903D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TweetinviControllers", "tweetyzard.Controllers\TweetinviControllers.csproj", "{DF24C0E2-9C31-485E-8C28-4683901949B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TweetinviCore", "tweetyzard.Core\TweetinviCore.csproj", "{2DA9C20D-E072-4152-BEEE-11FEAFF61E0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TweetinviCredentials", "tweetyzard.Credentials\TweetinviCredentials.csproj", "{AC583672-F6BA-462E-9944-FF8E31F14102}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TweetinviFactories", "tweetyzard.Factories\TweetinviFactories.csproj", "{653763CB-4ADF-4EB9-89FB-E5F843FB67A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TweetinviLogic", "tweetyzard.Logic\TweetinviLogic.csproj", "{58567CC3-67D4-47BD-94D8-1E1E5CDD71C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TweetinviWebLogic", "tweetyzard.WebLogic\TweetinviWebLogic.csproj", "{30BC9765-D495-449A-8E3E-0AD06D30B7FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UILibrary", "tweetyzard.UILibrary\UILibrary.csproj", "{6134C033-04B9-4A87-BBCA-061AC6AA259A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Streaminvi", "tweetyzard.Streaminvi\Streaminvi.csproj", "{60696520-C228-46C3-93B0-5048853B124A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CoreAPI", "CoreAPI", "{C36A3F42-88BD-4DAF-9B03-A293B5A0E529}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{B22AC9E6-E09D-487C-8B01-E66CE703DBFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetroFramework", "MetroFramework\MetroFramework.csproj", "{BB41AC8B-CBED-4387-A7E0-4567EDB3F57F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetroFramework.Design", "MetroFramework.Design\MetroFramework.Design.csproj", "{7316584D-9A16-4280-A8AB-6D45198C6E4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetroFramework.Fonts", "MetroFramework.Fonts\MetroFramework.Fonts.csproj", "{5A2FCAE8-C2FA-41BD-90EA-16103EA07B26}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UX API", "UX API", "{AE097E8B-4327-4700-A505-5E377937A785}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 14
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs16
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = MetroFramework.Design\\MetroFramework.Design.csproj
+		SccProjectTopLevelParentUniqueName1 = tweetyzard.solution.sln
+		SccProjectName1 = MetroFramework.Design
+		SccLocalPath1 = MetroFramework.Design
+		SccProjectUniqueName2 = MetroFramework.Fonts\\MetroFramework.Fonts.csproj
+		SccProjectTopLevelParentUniqueName2 = tweetyzard.solution.sln
+		SccProjectName2 = MetroFramework.Fonts
+		SccLocalPath2 = MetroFramework.Fonts
+		SccProjectUniqueName3 = MetroFramework\\MetroFramework.csproj
+		SccProjectTopLevelParentUniqueName3 = tweetyzard.solution.sln
+		SccProjectName3 = MetroFramework
+		SccLocalPath3 = MetroFramework
+		SccProjectUniqueName4 = tweetyzard.Controllers\\TweetinviControllers.csproj
+		SccProjectTopLevelParentUniqueName4 = tweetyzard.solution.sln
+		SccProjectName4 = tweetyzard.Controllers
+		SccLocalPath4 = tweetyzard.Controllers
+		SccProjectUniqueName5 = tweetyzard.Core\\TweetinviCore.csproj
+		SccProjectTopLevelParentUniqueName5 = tweetyzard.solution.sln
+		SccProjectName5 = tweetyzard.Core
+		SccLocalPath5 = tweetyzard.Core
+		SccProjectUniqueName6 = tweetyzard.Credentials\\TweetinviCredentials.csproj
+		SccProjectTopLevelParentUniqueName6 = tweetyzard.solution.sln
+		SccProjectName6 = tweetyzard.Credentials
+		SccLocalPath6 = tweetyzard.Credentials
+		SccProjectUniqueName7 = tweetyzard.Factories\\TweetinviFactories.csproj
+		SccProjectTopLevelParentUniqueName7 = tweetyzard.solution.sln
+		SccProjectName7 = tweetyzard.Factories
+		SccLocalPath7 = tweetyzard.Factories
+		SccProjectUniqueName8 = tweetyzard.Logic\\TweetinviLogic.csproj
+		SccProjectTopLevelParentUniqueName8 = tweetyzard.solution.sln
+		SccProjectName8 = tweetyzard.Logic
+		SccLocalPath8 = tweetyzard.Logic
+		SccProjectUniqueName9 = tweetyzard.Streaminvi\\Streaminvi.csproj
+		SccProjectTopLevelParentUniqueName9 = tweetyzard.solution.sln
+		SccProjectName9 = tweetyzard.Streaminvi
+		SccLocalPath9 = tweetyzard.Streaminvi
+		SccProjectUniqueName10 = tweetyzard.Tweetinvi\\Tweetinvi.csproj
+		SccProjectTopLevelParentUniqueName10 = tweetyzard.solution.sln
+		SccProjectName10 = tweetyzard.Tweetinvi
+		SccLocalPath10 = tweetyzard.Tweetinvi
+		SccProjectUniqueName11 = tweetyzard.UILibrary\\UILibrary.csproj
+		SccProjectTopLevelParentUniqueName11 = tweetyzard.solution.sln
+		SccProjectName11 = tweetyzard.UILibrary
+		SccLocalPath11 = tweetyzard.UILibrary
+		SccProjectUniqueName12 = tweetyzard.WebLogic\\TweetinviWebLogic.csproj
+		SccProjectTopLevelParentUniqueName12 = tweetyzard.solution.sln
+		SccProjectName12 = tweetyzard.WebLogic
+		SccLocalPath12 = tweetyzard.WebLogic
+		SccProjectUniqueName13 = tweetyzard.winform\\tweetyzard.csproj
+		SccProjectTopLevelParentUniqueName13 = tweetyzard.solution.sln
+		SccProjectName13 = tweetyzard.winform
+		SccLocalPath13 = tweetyzard.winform
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{61E11DAF-1119-4E3B-BF0B-FD945E14D0BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61E11DAF-1119-4E3B-BF0B-FD945E14D0BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61E11DAF-1119-4E3B-BF0B-FD945E14D0BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61E11DAF-1119-4E3B-BF0B-FD945E14D0BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77B3033C-CF28-452D-A9A1-33D90F17903D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77B3033C-CF28-452D-A9A1-33D90F17903D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77B3033C-CF28-452D-A9A1-33D90F17903D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77B3033C-CF28-452D-A9A1-33D90F17903D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF24C0E2-9C31-485E-8C28-4683901949B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF24C0E2-9C31-485E-8C28-4683901949B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF24C0E2-9C31-485E-8C28-4683901949B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF24C0E2-9C31-485E-8C28-4683901949B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DA9C20D-E072-4152-BEEE-11FEAFF61E0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DA9C20D-E072-4152-BEEE-11FEAFF61E0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DA9C20D-E072-4152-BEEE-11FEAFF61E0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DA9C20D-E072-4152-BEEE-11FEAFF61E0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC583672-F6BA-462E-9944-FF8E31F14102}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC583672-F6BA-462E-9944-FF8E31F14102}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC583672-F6BA-462E-9944-FF8E31F14102}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC583672-F6BA-462E-9944-FF8E31F14102}.Release|Any CPU.Build.0 = Release|Any CPU
+		{653763CB-4ADF-4EB9-89FB-E5F843FB67A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{653763CB-4ADF-4EB9-89FB-E5F843FB67A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{653763CB-4ADF-4EB9-89FB-E5F843FB67A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{653763CB-4ADF-4EB9-89FB-E5F843FB67A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58567CC3-67D4-47BD-94D8-1E1E5CDD71C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58567CC3-67D4-47BD-94D8-1E1E5CDD71C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58567CC3-67D4-47BD-94D8-1E1E5CDD71C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58567CC3-67D4-47BD-94D8-1E1E5CDD71C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30BC9765-D495-449A-8E3E-0AD06D30B7FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30BC9765-D495-449A-8E3E-0AD06D30B7FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30BC9765-D495-449A-8E3E-0AD06D30B7FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30BC9765-D495-449A-8E3E-0AD06D30B7FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6134C033-04B9-4A87-BBCA-061AC6AA259A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6134C033-04B9-4A87-BBCA-061AC6AA259A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6134C033-04B9-4A87-BBCA-061AC6AA259A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6134C033-04B9-4A87-BBCA-061AC6AA259A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60696520-C228-46C3-93B0-5048853B124A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60696520-C228-46C3-93B0-5048853B124A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60696520-C228-46C3-93B0-5048853B124A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60696520-C228-46C3-93B0-5048853B124A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB41AC8B-CBED-4387-A7E0-4567EDB3F57F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB41AC8B-CBED-4387-A7E0-4567EDB3F57F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB41AC8B-CBED-4387-A7E0-4567EDB3F57F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB41AC8B-CBED-4387-A7E0-4567EDB3F57F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7316584D-9A16-4280-A8AB-6D45198C6E4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7316584D-9A16-4280-A8AB-6D45198C6E4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7316584D-9A16-4280-A8AB-6D45198C6E4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7316584D-9A16-4280-A8AB-6D45198C6E4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A2FCAE8-C2FA-41BD-90EA-16103EA07B26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A2FCAE8-C2FA-41BD-90EA-16103EA07B26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A2FCAE8-C2FA-41BD-90EA-16103EA07B26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A2FCAE8-C2FA-41BD-90EA-16103EA07B26}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{61E11DAF-1119-4E3B-BF0B-FD945E14D0BE} = {B22AC9E6-E09D-487C-8B01-E66CE703DBFC}
+		{DF24C0E2-9C31-485E-8C28-4683901949B0} = {C36A3F42-88BD-4DAF-9B03-A293B5A0E529}
+		{2DA9C20D-E072-4152-BEEE-11FEAFF61E0F} = {C36A3F42-88BD-4DAF-9B03-A293B5A0E529}
+		{AC583672-F6BA-462E-9944-FF8E31F14102} = {C36A3F42-88BD-4DAF-9B03-A293B5A0E529}
+		{653763CB-4ADF-4EB9-89FB-E5F843FB67A9} = {C36A3F42-88BD-4DAF-9B03-A293B5A0E529}
+		{58567CC3-67D4-47BD-94D8-1E1E5CDD71C6} = {C36A3F42-88BD-4DAF-9B03-A293B5A0E529}
+		{30BC9765-D495-449A-8E3E-0AD06D30B7FF} = {C36A3F42-88BD-4DAF-9B03-A293B5A0E529}
+		{6134C033-04B9-4A87-BBCA-061AC6AA259A} = {C36A3F42-88BD-4DAF-9B03-A293B5A0E529}
+		{60696520-C228-46C3-93B0-5048853B124A} = {C36A3F42-88BD-4DAF-9B03-A293B5A0E529}
+		{77B3033C-CF28-452D-A9A1-33D90F17903D} = {C36A3F42-88BD-4DAF-9B03-A293B5A0E529}
+		{7316584D-9A16-4280-A8AB-6D45198C6E4D} = {AE097E8B-4327-4700-A505-5E377937A785}
+		{5A2FCAE8-C2FA-41BD-90EA-16103EA07B26} = {AE097E8B-4327-4700-A505-5E377937A785}
+		{BB41AC8B-CBED-4387-A7E0-4567EDB3F57F} = {AE097E8B-4327-4700-A505-5E377937A785}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.2\lib\NET35
+	EndGlobalSection
+EndGlobal

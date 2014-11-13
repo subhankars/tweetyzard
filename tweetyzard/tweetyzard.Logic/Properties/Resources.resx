@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ExceptionDescription_304" xml:space="preserve">
+    <value>Not Modified - There was no new data to return.</value>
+  </data>
+  <data name="ExceptionDescription_400" xml:space="preserve">
+    <value>Bad Request - The request was invalid or cannot be otherwise served. An accompanying error message will explain further. In API v1.1, requests without authentication are considered invalid and will yield this response.</value>
+  </data>
+  <data name="ExceptionDescription_401" xml:space="preserve">
+    <value>Unauthorized -  Authentication credentials were missing or incorrect.</value>
+  </data>
+  <data name="ExceptionDescription_403" xml:space="preserve">
+    <value>Forbidden - The request is understood, but it has been refused or access is not allowed. An accompanying error message will explain why. This code is used when requests are being denied due to update limits.</value>
+  </data>
+  <data name="ExceptionDescription_404" xml:space="preserve">
+    <value>Not Found - The URI requested is invalid or the resource requested, such as a user, does not exists. Also returned when the requested format is not supported by the requested method.</value>
+  </data>
+  <data name="ExceptionDescription_406" xml:space="preserve">
+    <value>Not Acceptable - Returned by the Search API when an invalid format is specified in the request.</value>
+  </data>
+  <data name="ExceptionDescription_410" xml:space="preserve">
+    <value>Gone - This resource is gone. Used to indicate that an API endpoint has been turned off. For example: "The Twitter REST API v1 will soon stop functioning. Please migrate to API v1.1.</value>
+  </data>
+  <data name="ExceptionDescription_422" xml:space="preserve">
+    <value>Unprocessable Entity - Returned when an image uploaded to POST account/update_profile_banner is unable to be processed.</value>
+  </data>
+  <data name="ExceptionDescription_429" xml:space="preserve">
+    <value>Too Many Requests - Returned in API v1.1 when a request cannot be served due to the application's rate limit having been exhausted for the resource. See Rate Limiting in API v1.1.</value>
+  </data>
+  <data name="ExceptionDescription_500" xml:space="preserve">
+    <value>Internal Server Error - Something is broken. Please post to the group so the Twitter team can investigate.</value>
+  </data>
+  <data name="ExceptionDescription_502" xml:space="preserve">
+    <value>Bad Gateway - Twitter is down or being upgraded.</value>
+  </data>
+  <data name="ExceptionDescription_503" xml:space="preserve">
+    <value>Service Unavailable - The Twitter servers are up, but overloaded with requests. Try again later.</value>
+  </data>
+  <data name="ExceptionDescription_504" xml:space="preserve">
+    <value>Gateway timeout - The Twitter servers are up, but the request couldn't be serviced due to some failure within our stack. Try again later.</value>
+  </data>
+  <data name="Messages_Destroy" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/direct_messages/destroy.json?id={0}</value>
+    <comment>Messages</comment>
+  </data>
+  <data name="Messages_GetDirectMessage" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/direct_messages/show.json?id={0}</value>
+    <comment>Messages</comment>
+  </data>
+  <data name="Messages_SendToUserId" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/direct_messages/new.json?text={0}&amp;user_id={1}</value>
+    <comment>Messages</comment>
+  </data>
+  <data name="Messages_SendToUserScreenName" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/direct_messages/new.json?text={0}&amp;screen_name={1}</value>
+    <comment>Messages</comment>
+  </data>
+  <data name="Stream_Sample" xml:space="preserve">
+    <value>https://stream.twitter.com/1.1/statuses/sample.json</value>
+    <comment>Stream</comment>
+  </data>
+  <data name="SuggestedUserList_Get" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/users/suggestions/{0}.json</value>
+    <comment>Suggested User List</comment>
+  </data>
+  <data name="SuggestedUserList_GetMembers" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/users/suggestions/{0}/members.json</value>
+    <comment>Suggested User List</comment>
+  </data>
+  <data name="TokenUser_CreateFriendship" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/friendships/create.json?follow={0}&amp;</value>
+    <comment>TokenUser Friendship</comment>
+  </data>
+  <data name="TokenUser_DestroyFriendship" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/friendships/destroy.json?</value>
+    <comment>TokenUser Friendship</comment>
+  </data>
+  <data name="TokenUser_GetAccountSettings" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/account/settings.json</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="TokenUser_GetBlockedUsers" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/blocks/list.json?include_entities=true&amp;skip_status=false</value>
+    <comment>Blocked Users</comment>
+  </data>
+  <data name="TokenUser_GetBlockedUsersIds" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/blocks/ids.json</value>
+    <comment>Blocked Users</comment>
+  </data>
+  <data name="TokenUser_GetHomeTimeline" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/statuses/home_timeline.json?count={0}trim_user={1}&amp;exclude_replies={2}&amp;since_id={3}&amp;max_id={4}&amp;contributor_details=true&amp;include_entities=true</value>
+    <comment>Home Timeline</comment>
+  </data>
+  <data name="TokenUser_GetLatestDirectMessagesReceived" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/direct_messages.json?count={0}</value>
+    <comment>Direct Messages Received</comment>
+  </data>
+  <data name="TokenUser_GetLatestDirectMessagesSent" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/direct_messages/sent.json?count={0}</value>
+    <comment>Direct Messages Sent</comment>
+  </data>
+  <data name="TokenUser_GetLatestHomeTimeline" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/statuses/home_timeline.json?count={0}&amp;trim_user={1}&amp;exclude_replies={2}&amp;contributor_details=true&amp;include_entities=true</value>
+    <comment>Home Timeline</comment>
+  </data>
+  <data name="TokenUser_GetLatestMentionTimeline" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/statuses/mentions_timeline.json?include_entities=1&amp;count={0}</value>
+    <comment>Mentions Timeline</comment>
+  </data>
+  <data name="TokenUser_GetRetweetsOfMe" xml:space="preserve">
+    <value>https://api.twitter.com/1/statuses/retweets_of_me.json?count=100&amp;include_entities=1</value>
+    <comment>NOT IMPLEMENTED</comment>
+  </data>
+  <data name="TokenUser_GetUserSuggestions" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/users/suggestions.json</value>
+    <comment>Suggested Users</comment>
+  </data>
+  <data name="Tweet_CreateFavourite" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/favorites/create.json?id={0}</value>
+    <comment>Tweet Favourite</comment>
+  </data>
+  <data name="Tweet_Destroy" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/statuses/destroy/{0}.json</value>
+    <comment>Tweet Destroy</comment>
+  </data>
+  <data name="Tweet_DestroyFavourite" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/favorites/destroy.json?id={0}</value>
+    <comment>Tweet Favourite</comment>
+  </data>
+  <data name="Tweet_GetFromIdWithEntities" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/statuses/show/{0}.json?include_entities=true</value>
+    <comment>Tweet Get</comment>
+  </data>
+  <data name="Tweet_GetRetweetOfTweet" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/statuses/retweets/{0}.json</value>
+    <comment>Retweet Get</comment>
+  </data>
+  <data name="Tweet_Publish" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/statuses/update.json?status={0}&amp;trim_user={1}</value>
+    <comment>Tweet Publish</comment>
+  </data>
+  <data name="Tweet_PublishInReplyTo" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/statuses/update.json?status={0}&amp;trim_user={1}&amp;in_reply_to_status_id={2}</value>
+    <comment>Tweet Publish</comment>
+  </data>
+  <data name="Tweet_PublishRetweet" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/statuses/retweet/{0}.json</value>
+    <comment>Retweet Publish</comment>
+  </data>
+  <data name="Tweet_PublishWithGeo" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/statuses/update.json?status={0}&amp;trim_user={1}&amp;lat={2}&amp;long={3}&amp;display_coordinates={4}</value>
+    <comment>Tweet Publish</comment>
+  </data>
+  <data name="Tweet_PublishWithGeoInReplyTo" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/statuses/update.json?status={0}&amp;trim_user={1}&amp;lat={2}&amp;long={3}&amp;display_coordinates={4}&amp;in_reply_to_status_id={5}</value>
+    <comment>Tweet Publish</comment>
+  </data>
+  <data name="Tweet_TextTooBig" xml:space="preserve">
+    <value>A tweet cannot be longer than 140 characters.</value>
+    <comment>Tweet</comment>
+  </data>
+  <data name="UserUtils_Lookup" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/users/lookup.json?include_entities=true</value>
+    <comment>User Get</comment>
+  </data>
+  <data name="User_GetContributees" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/users/contributees.json?</value>
+    <comment>User Get Contributees</comment>
+  </data>
+  <data name="User_GetContributors" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/users/contributors.json?</value>
+    <comment>User Get Contributors</comment>
+  </data>
+  <data name="User_GetFavouritesBetweenIds" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/favorites/list.json?count={0}&amp;include_entities={1}&amp;since_id={2}&amp;max_id={3}</value>
+    <comment>Favourites Tweet</comment>
+  </data>
+  <data name="User_GetFavouritesSinceId" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/favorites/list.json?count={0}&amp;include_entities={1}&amp;since_id={2}</value>
+    <comment>Favourites Tweet</comment>
+  </data>
+  <data name="User_GetFavouritesUntilId" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/favorites/list.json?count={0}&amp;include_entities={1}&amp;max_id={2}</value>
+    <comment>Favourites Tweet</comment>
+  </data>
+  <data name="User_GetFollowers" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/followers/ids.json?</value>
+    <comment>Followers</comment>
+  </data>
+  <data name="User_GetFriends" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/friends/ids.json?</value>
+    <comment>User Friends</comment>
+  </data>
+  <data name="User_GetFriendship" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/friendships/show.json?</value>
+    <comment>User Friendship</comment>
+  </data>
+  <data name="User_GetLastFavourites" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/favorites/list.json?count={0}&amp;include_entities={1}</value>
+    <comment>Favourites Tweet</comment>
+  </data>
+  <data name="User_GetUser" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/users/show.json?include_entities=true&amp;</value>
+    <comment>User Get</comment>
+  </data>
+  <data name="User_GetUserTimeline" xml:space="preserve">
+    <value>https://api.twitter.com/1.1/statuses/user_timeline.json?include_rts=1&amp;include_entities=true&amp;count=200&amp;user_id={0}</value>
+    <comment>User Timeline</comment>
+  </data>
+</root>

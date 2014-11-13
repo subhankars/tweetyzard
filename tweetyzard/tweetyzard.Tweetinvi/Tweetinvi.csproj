@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{77B3033C-CF28-452D-A9A1-33D90F17903D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tweetinvi</RootNamespace>
+    <AssemblyName>Tweetinvi</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Unity.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.8\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ExceptionHandler.cs" />
+    <Compile Include="Geo.cs" />
+    <Compile Include="Help.cs" />
+    <Compile Include="Json\AccountJson.cs" />
+    <Compile Include="Json\FriendshipJson.cs" />
+    <Compile Include="Json\GeoJson.cs" />
+    <Compile Include="Json\HelpJson.cs" />
+    <Compile Include="Json\MessageJson.cs" />
+    <Compile Include="Json\SavedSearchJson.cs" />
+    <Compile Include="Json\TimelineJson.cs" />
+    <Compile Include="Json\TrendsJson.cs" />
+    <Compile Include="Json\TweetJson.cs" />
+    <Compile Include="Json\UserJson.cs" />
+    <Compile Include="Message.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RateLimit.cs" />
+    <Compile Include="SavedSearch.cs" />
+    <Compile Include="Search.cs" />
+    <Compile Include="Stream.cs" />
+    <Compile Include="Timeline.cs" />
+    <Compile Include="CredentialsCreator.cs" />
+    <Compile Include="Trends.cs" />
+    <Compile Include="TweetList.cs" />
+    <Compile Include="Tweet.cs" />
+    <Compile Include="TweetinviContainer.cs" />
+    <Compile Include="TwitterAccessor.cs" />
+    <Compile Include="TwitterCredentials.cs" />
+    <Compile Include="User.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\tweetyzard.Streaminvi\Streaminvi.csproj">
+      <Project>{60696520-c228-46c3-93b0-5048853b124a}</Project>
+      <Name>Streaminvi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\tweetyzard.Core\TweetinviCore.csproj">
+      <Project>{2da9c20d-e072-4152-beee-11feaff61e0f}</Project>
+      <Name>TweetinviCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\tweetyzard.Controllers\TweetinviControllers.csproj">
+      <Project>{df24c0e2-9c31-485e-8c28-4683901949b0}</Project>
+      <Name>TweetinviControllers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\tweetyzard.Factories\TweetinviFactories.csproj">
+      <Project>{653763cb-4adf-4eb9-89fb-e5f843fb67a9}</Project>
+      <Name>TweetinviFactories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\tweetyzard.Logic\TweetinviLogic.csproj">
+      <Project>{58567cc3-67d4-47bd-94d8-1e1e5cdd71c6}</Project>
+      <Name>TweetinviLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\tweetyzard.Credentials\TweetinviCredentials.csproj">
+      <Project>{ac583672-f6ba-462e-9944-ff8e31f14102}</Project>
+      <Name>TweetinviCredentials</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\tweetyzard.WebLogic\TweetinviWebLogic.csproj">
+      <Project>{30bc9765-d495-449a-8e3e-0ad06d30b7ff}</Project>
+      <Name>TweetinviWebLogic</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
