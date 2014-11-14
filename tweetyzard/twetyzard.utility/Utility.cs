@@ -5,25 +5,26 @@ using System.Globalization;
 using System.Linq;
 using System.Reflection;
 using TweetinviCore.Interfaces;
+using tweetyzard.domain;
 
-namespace tweetyzard.winform
+namespace tweetyzard.utility
 {
     public static class Utility
     {
-        public static CustomTweetDomain MapStreamedTweetToTweetDomain(ITweet streamedTweet, string searchPhrase)
+        //public static CustomTweetDomain MapStreamedTweetToTweetDomain(ITweet streamedTweet, string searchPhrase)
+        public static TweetStore MapStreamedTweetToTweetDomain(ITweet streamedTweet, string searchPhrase)
         {
-            CustomTweetDomain tweetDomain = new CustomTweetDomain();
+           // CustomTweetDomain tweetDomain = new CustomTweetDomain();
+            TweetStore tweetDomain = new TweetStore();
 
             if (streamedTweet == null)
             {
                 throw new ArgumentNullException("ITweet is null");
             }
 
-            tweetDomain = new CustomTweetDomain();
+            //tweetDomain = new CustomTweetDomain();
+            tweetDomain = new TweetStore();
 
-            //Map the properties here manually.
-            //Future work: Implement automapper when we will have Normalized data structure.
-            
             tweetDomain.SearchPhrase = searchPhrase;
 
             if (streamedTweet.Creator != null)
@@ -115,7 +116,6 @@ namespace tweetyzard.winform
         /// <param name="tableName">table name</param>
         /// <param name="isDeleteIdField">true / false</param>
         /// <returns>Data Table</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", MessageId = "isDeleteIdField")]
         public static DataTable ToDataTable<T>(this IList<T> data, string tableName, bool isDeleteIdField)
         {
             PropertyInfo[] props = null;

@@ -1,4 +1,4 @@
-﻿namespace tweetyzard.winform
+﻿namespace tweetyzard.utility
 {
     partial class tweetyzard
     {

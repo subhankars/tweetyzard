@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace tweetyzard.winform
+namespace tweetyzard.utility
 {
     public class ExcelColumn
     {

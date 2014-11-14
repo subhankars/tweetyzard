@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace tweetyzard.utility.LocalResources {
+namespace twetyzard.utility {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace tweetyzard.utility.LocalResources {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("tweetyzard.winform.LocalResources.PrintFormatting", typeof(PrintFormatting).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("twetyzard.utility.PrintFormatting", typeof(PrintFormatting).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

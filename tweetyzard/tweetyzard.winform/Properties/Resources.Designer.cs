@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace tweetyzard.winform.Properties {
+namespace tweetyzard.utility.Properties {
     using System;
     
     

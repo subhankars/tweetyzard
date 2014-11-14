@@ -3,11 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Linq;
 using System.Drawing;
-using System.Drawing.Drawing2D;
-using System.Globalization;
-using System.Threading;
 using System.Windows.Forms;
 using Tweetinvi;
 using TweetinviCore.Enum;
@@ -15,8 +11,10 @@ using TweetinviCore.Interfaces;
 using TweetinviCore.Interfaces.Controllers;
 using TweetinviCore.Interfaces.Models;
 using TweetinviLogic.Model;
+using tweetyzard.domain;
+using twetyzard.utility;
 
-namespace tweetyzard.winform
+namespace tweetyzard.utility
 {
     public partial class tweetyzard : MetroForm
     {
@@ -31,7 +29,8 @@ namespace tweetyzard.winform
         private int fetch = 0;
         #endregion
         
-        public List<CustomTweetDomain> listOfGatheredTweets = new List<CustomTweetDomain>();
+        //public List<CustomTweetDomain> listOfGatheredTweets = new List<CustomTweetDomain>();
+        public List<TweetStore> listOfGatheredTweets = new List<TweetStore>();
 
         public tweetyzard()
         {
@@ -166,7 +165,8 @@ namespace tweetyzard.winform
             
             lblStream.Text = "Live Stream";
             tweetCount.Text = "0";
-            listOfGatheredTweets = new List<CustomTweetDomain>();
+            //listOfGatheredTweets = new List<CustomTweetDomain>();
+            listOfGatheredTweets = new List<TweetStore>();
             tweetsTextBox.Text = "";
             tweetsTextBox.Text = "Searching for tweets...\n\n";
             StartStreamButton.Enabled = false;
@@ -311,7 +311,8 @@ namespace tweetyzard.winform
                         tweetsTextBox.AppendText("\r\n Your data has been exported to: " + dlg.FileName);
                         tweetsTextBox.SelectionStart = tweetsTextBox.TextLength;
                         tweetsTextBox.ScrollToCaret();
-                        listOfGatheredTweets = new List<CustomTweetDomain>();
+                        //listOfGatheredTweets = new List<CustomTweetDomain>();
+                        listOfGatheredTweets = new List<TweetStore>();
                     }
                 }
             }
@@ -343,7 +344,8 @@ namespace tweetyzard.winform
             ExportToDb.Enabled = false;
             tweetCount.Text = "0";
             searchPhraseTextBox.Text = "";
-            listOfGatheredTweets = new List<CustomTweetDomain>();
+            //listOfGatheredTweets = new List<CustomTweetDomain>();
+            listOfGatheredTweets = new List<TweetStore>();
             tweetsTextBox.Text = "";
             geoFlag.Checked = false;
             geoFlag.Enabled = true;
@@ -378,7 +380,8 @@ namespace tweetyzard.winform
                 backgroundWorkerSearch.RunWorkerAsync();
                 lblStream.Text = "Search Result";
                 tweetCount.Text = "0";
-                listOfGatheredTweets = new List<CustomTweetDomain>();
+                //listOfGatheredTweets = new List<CustomTweetDomain>();
+                listOfGatheredTweets = new List<TweetStore>();
                 tweetsTextBox.Text = "";
                 tweetsTextBox.Text = "Searching for tweets...\n\n";
                 StartStreamButton.Enabled = false;

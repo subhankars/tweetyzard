@@ -33,9 +33,25 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetroFramework.Fonts", "Met
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UX API", "UX API", "{AE097E8B-4327-4700-A505-5E377937A785}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{503C1EAF-736E-4418-830F-21F14E60DD2F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ServiceApi", "ServiceApi", "{57DDDF4F-8868-49F3-B17A-D116BE8ADE99}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "tweetyzard.database", "tweetyzard.database\tweetyzard.database.sqlproj", "{C3C56532-7529-4685-B3AE-AA33179F8973}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataAccess", "DataAccess", "{ED11BFEA-2848-4C31-B240-F82FB4345405}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tweetyzard.dataaccess", "tweetyzard.dataaccess\tweetyzard.dataaccess.csproj", "{0D1D7A61-5326-4D68-87C7-CA6E6A7D93CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tweetyzard.domain", "tweetyzard.domain\tweetyzard.domain.csproj", "{3377BF7D-77A8-4B6B-8F9E-00FA2F80A704}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tweetyzard.webapi", "tweetyzard.webapi\tweetyzard.webapi.csproj", "{132139E5-7226-45DC-BED5-C6BE7192FA19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "twetyzard.utility", "twetyzard.utility\twetyzard.utility.csproj", "{997349F7-2529-435D-BCCA-5292FC929B3E}"
+EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 14
+		SccNumberOfProjects = 19
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs16
 		SccLocalPath0 = .
@@ -91,6 +107,26 @@ Global
 		SccProjectTopLevelParentUniqueName13 = tweetyzard.solution.sln
 		SccProjectName13 = tweetyzard.winform
 		SccLocalPath13 = tweetyzard.winform
+		SccProjectUniqueName14 = tweetyzard.database\\tweetyzard.database.sqlproj
+		SccProjectTopLevelParentUniqueName14 = tweetyzard.solution.sln
+		SccProjectName14 = tweetyzard.database
+		SccLocalPath14 = tweetyzard.database
+		SccProjectUniqueName15 = tweetyzard.dataaccess\\tweetyzard.dataaccess.csproj
+		SccProjectTopLevelParentUniqueName15 = tweetyzard.solution.sln
+		SccProjectName15 = tweetyzard.dataaccess
+		SccLocalPath15 = tweetyzard.dataaccess
+		SccProjectUniqueName16 = tweetyzard.domain\\tweetyzard.domain.csproj
+		SccProjectTopLevelParentUniqueName16 = tweetyzard.solution.sln
+		SccProjectName16 = tweetyzard.domain
+		SccLocalPath16 = tweetyzard.domain
+		SccProjectUniqueName17 = tweetyzard.webapi\\tweetyzard.webapi.csproj
+		SccProjectTopLevelParentUniqueName17 = tweetyzard.solution.sln
+		SccProjectName17 = tweetyzard.webapi
+		SccLocalPath17 = tweetyzard.webapi
+		SccProjectUniqueName18 = twetyzard.utility\\twetyzard.utility.csproj
+		SccProjectTopLevelParentUniqueName18 = tweetyzard.solution.sln
+		SccProjectName18 = twetyzard.utility
+		SccLocalPath18 = twetyzard.utility
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -149,6 +185,28 @@ Global
 		{5A2FCAE8-C2FA-41BD-90EA-16103EA07B26}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A2FCAE8-C2FA-41BD-90EA-16103EA07B26}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A2FCAE8-C2FA-41BD-90EA-16103EA07B26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3C56532-7529-4685-B3AE-AA33179F8973}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3C56532-7529-4685-B3AE-AA33179F8973}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3C56532-7529-4685-B3AE-AA33179F8973}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{C3C56532-7529-4685-B3AE-AA33179F8973}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3C56532-7529-4685-B3AE-AA33179F8973}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3C56532-7529-4685-B3AE-AA33179F8973}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{0D1D7A61-5326-4D68-87C7-CA6E6A7D93CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D1D7A61-5326-4D68-87C7-CA6E6A7D93CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D1D7A61-5326-4D68-87C7-CA6E6A7D93CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D1D7A61-5326-4D68-87C7-CA6E6A7D93CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3377BF7D-77A8-4B6B-8F9E-00FA2F80A704}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3377BF7D-77A8-4B6B-8F9E-00FA2F80A704}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3377BF7D-77A8-4B6B-8F9E-00FA2F80A704}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3377BF7D-77A8-4B6B-8F9E-00FA2F80A704}.Release|Any CPU.Build.0 = Release|Any CPU
+		{132139E5-7226-45DC-BED5-C6BE7192FA19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{132139E5-7226-45DC-BED5-C6BE7192FA19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{132139E5-7226-45DC-BED5-C6BE7192FA19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{132139E5-7226-45DC-BED5-C6BE7192FA19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{997349F7-2529-435D-BCCA-5292FC929B3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{997349F7-2529-435D-BCCA-5292FC929B3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{997349F7-2529-435D-BCCA-5292FC929B3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{997349F7-2529-435D-BCCA-5292FC929B3E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -164,9 +222,14 @@ Global
 		{6134C033-04B9-4A87-BBCA-061AC6AA259A} = {C36A3F42-88BD-4DAF-9B03-A293B5A0E529}
 		{60696520-C228-46C3-93B0-5048853B124A} = {C36A3F42-88BD-4DAF-9B03-A293B5A0E529}
 		{77B3033C-CF28-452D-A9A1-33D90F17903D} = {C36A3F42-88BD-4DAF-9B03-A293B5A0E529}
+		{997349F7-2529-435D-BCCA-5292FC929B3E} = {C36A3F42-88BD-4DAF-9B03-A293B5A0E529}
 		{7316584D-9A16-4280-A8AB-6D45198C6E4D} = {AE097E8B-4327-4700-A505-5E377937A785}
 		{5A2FCAE8-C2FA-41BD-90EA-16103EA07B26} = {AE097E8B-4327-4700-A505-5E377937A785}
 		{BB41AC8B-CBED-4387-A7E0-4567EDB3F57F} = {AE097E8B-4327-4700-A505-5E377937A785}
+		{C3C56532-7529-4685-B3AE-AA33179F8973} = {503C1EAF-736E-4418-830F-21F14E60DD2F}
+		{132139E5-7226-45DC-BED5-C6BE7192FA19} = {57DDDF4F-8868-49F3-B17A-D116BE8ADE99}
+		{0D1D7A61-5326-4D68-87C7-CA6E6A7D93CB} = {ED11BFEA-2848-4C31-B240-F82FB4345405}
+		{3377BF7D-77A8-4B6B-8F9E-00FA2F80A704} = {ED11BFEA-2848-4C31-B240-F82FB4345405}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.2\lib\NET35
