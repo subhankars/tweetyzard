@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Globalization;
+using System.IO;
+using System.IO.Compression;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.Serialization;
 using TweetinviCore.Interfaces;
 using tweetyzard.domain;
 
@@ -152,6 +155,33 @@ namespace tweetyzard.utility
                 }
 
                 return table;
+            }
+        }
+
+        public static Stream SerializeCompressToStream<T>(object data)
+        {
+            DataContractSerializer serializerObj = new DataContractSerializer(typeof(T));
+            MemoryStream ms = new MemoryStream();
+            serializerObj.WriteObject(ms, data);
+            byte[] b = ms.ToArray();
+
+            using (MemoryStream memory = new MemoryStream())
+            {
+                using (GZipStream gzip = new GZipStream(memory, CompressionMode.Compress, true))
+                {
+                    gzip.Write(b, 0, b.Length);
+                }
+
+                return new MemoryStream(memory.ToArray());
+            }
+        }
+
+        public static object DecompressDeserialize<T>(Stream inputStream)
+        {
+            using (System.IO.Compression.GZipStream s = new System.IO.Compression.GZipStream(inputStream, System.IO.Compression.CompressionMode.Decompress))
+            {
+                System.Runtime.Serialization.DataContractSerializer dcSerializer = new System.Runtime.Serialization.DataContractSerializer(typeof(T));
+                return dcSerializer.ReadObject(s);
             }
         }
     }

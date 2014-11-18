@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataAccess\DatabaseHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="tweetyzardModel.Context.cs">
       <AutoGen>True</AutoGen>

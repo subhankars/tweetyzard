@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Windows.Forms;
 using Tweetinvi;
 using TweetinviCore.Enum;
@@ -11,6 +13,7 @@ using TweetinviCore.Interfaces;
 using TweetinviCore.Interfaces.Controllers;
 using TweetinviCore.Interfaces.Models;
 using TweetinviLogic.Model;
+using tweetyzard.dataaccess.DataAccess;
 using tweetyzard.domain;
 using twetyzard.utility;
 
@@ -27,10 +30,8 @@ namespace tweetyzard.utility
         private int searchedTweet = 0;
         private List<ITrend> trends;
         private int fetch = 0;
+        private List<TweetStore> listOfGatheredTweets = new List<TweetStore>();
         #endregion
-        
-        //public List<CustomTweetDomain> listOfGatheredTweets = new List<CustomTweetDomain>();
-        public List<TweetStore> listOfGatheredTweets = new List<TweetStore>();
 
         public tweetyzard()
         {
@@ -84,7 +85,8 @@ namespace tweetyzard.utility
             toolTipTw.SetToolTip(this.geoFlag, "Searches tweets which are only geo tagged");
             
         }
-     
+
+        #region PrivateMethods
         private void BackgroundWorkerOnProgressChanged(object sender, ProgressChangedEventArgs progressChangedEventArgs)
         {
             try
@@ -96,7 +98,7 @@ namespace tweetyzard.utility
                     if (!backgroundWorker.CancellationPending && !this.IsDisposed)
                     {
                         tweet = (ITweet)progressChangedEventArgs.UserState;
-                        
+
                         ////Remove searching... text as soon as a tweet is found
                         if (nbTweetDetected == 1 && tweetsTextBox.Text.Length > 0)
                         {
@@ -161,11 +163,10 @@ namespace tweetyzard.utility
                 MessageBox.Show("Search phrase is required to start streaming");
                 searchPhraseTextBox.Focus();
                 return;
-            } 
-            
+            }
+
             lblStream.Text = "Live Stream";
             tweetCount.Text = "0";
-            //listOfGatheredTweets = new List<CustomTweetDomain>();
             listOfGatheredTweets = new List<TweetStore>();
             tweetsTextBox.Text = "";
             tweetsTextBox.Text = "Searching for tweets...\n\n";
@@ -241,11 +242,7 @@ namespace tweetyzard.utility
             searchParams.Lang = Language.English;
             searchParams.SearchType = SearchResultType.Recent;
             searchParams.Until = DateTime.Today;
-            //searchParams.SinceId = 1;
-            //searchParams.MaxId = long.MaxValue;
             searchParams.MaximumNumberOfResults = 10000;
-            //searchParams.SetGeoCode(Tweetinvi.Geo.GenerateCoordinates(-10, 20), 1000000, DistanceMeasure.Miles);
-
             List<ITweet> searchedTweets = Search.SearchTweets(searchParams);
 
 
@@ -257,7 +254,7 @@ namespace tweetyzard.utility
                     backgroundWorkerSearch.ReportProgress(++searchedTweet, tweet);
                 }
             }
-           
+
         }
 
         private void BackgroundWorkerOnRunWorkerCompleted(object sender, RunWorkerCompletedEventArgs runWorkerCompletedEventArgs)
@@ -311,7 +308,6 @@ namespace tweetyzard.utility
                         tweetsTextBox.AppendText("\r\n Your data has been exported to: " + dlg.FileName);
                         tweetsTextBox.SelectionStart = tweetsTextBox.TextLength;
                         tweetsTextBox.ScrollToCaret();
-                        //listOfGatheredTweets = new List<CustomTweetDomain>();
                         listOfGatheredTweets = new List<TweetStore>();
                     }
                 }
@@ -344,7 +340,6 @@ namespace tweetyzard.utility
             ExportToDb.Enabled = false;
             tweetCount.Text = "0";
             searchPhraseTextBox.Text = "";
-            //listOfGatheredTweets = new List<CustomTweetDomain>();
             listOfGatheredTweets = new List<TweetStore>();
             tweetsTextBox.Text = "";
             geoFlag.Checked = false;
@@ -356,7 +351,6 @@ namespace tweetyzard.utility
         {
             currentTime.Text = DateTime.Now.ToString("F");
         }
-
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
@@ -380,7 +374,6 @@ namespace tweetyzard.utility
                 backgroundWorkerSearch.RunWorkerAsync();
                 lblStream.Text = "Search Result";
                 tweetCount.Text = "0";
-                //listOfGatheredTweets = new List<CustomTweetDomain>();
                 listOfGatheredTweets = new List<TweetStore>();
                 tweetsTextBox.Text = "";
                 tweetsTextBox.Text = "Searching for tweets...\n\n";
@@ -398,8 +391,14 @@ namespace tweetyzard.utility
 
         private void ExportToDb_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Export to database is not supported at this moment", "DB Export not supported", MessageBoxButtons.OK);
-            return;
+            if (DatabaseHelper.SqlBulkInsert("TweetStore", Utility.ToDataTable(listOfGatheredTweets, "TweetStore")))
+            {
+                tweetsTextBox.AppendText("\r\n Your data has been exported to database");
+            }
+            else
+            {
+                tweetsTextBox.AppendText("\r\n Something went wrong while saving data to database");
+            }
         }
 
         private void trendTimer_Tick(object sender, EventArgs e)
@@ -414,10 +413,9 @@ namespace tweetyzard.utility
                 }
                 return;
             }
-            
+
         }
 
-      
         private void CopyTrendToSearch_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(trendingTopics.Text))
@@ -447,10 +445,8 @@ namespace tweetyzard.utility
             }
 
 
-        }
-
-      
+        } 
+        #endregion
         
     }
-   
 }

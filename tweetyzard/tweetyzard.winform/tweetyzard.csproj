@@ -82,8 +82,10 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -197,6 +199,10 @@
       <Project>{ac583672-f6ba-462e-9944-ff8e31f14102}</Project>
       <Name>TweetinviCredentials</Name>
     </ProjectReference>
+    <ProjectReference Include="..\tweetyzard.dataaccess\tweetyzard.dataaccess.csproj">
+      <Project>{0d1d7a61-5326-4d68-87c7-ca6e6a7d93cb}</Project>
+      <Name>tweetyzard.dataaccess</Name>
+    </ProjectReference>
     <ProjectReference Include="..\tweetyzard.domain\tweetyzard.domain.csproj">
       <Project>{3377bf7d-77a8-4b6b-8f9e-00fa2f80a704}</Project>
       <Name>tweetyzard.domain</Name>
@@ -208,10 +214,6 @@
     <ProjectReference Include="..\tweetyzard.Logic\TweetinviLogic.csproj">
       <Project>{58567cc3-67d4-47bd-94d8-1e1e5cdd71c6}</Project>
       <Name>TweetinviLogic</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\tweetyzard.WebLogic\TweetinviWebLogic.csproj">
-      <Project>{30bc9765-d495-449a-8e3e-0ad06d30b7ff}</Project>
-      <Name>TweetinviWebLogic</Name>
     </ProjectReference>
     <ProjectReference Include="..\tweetyzard.Tweetinvi\Tweetinvi.csproj">
       <Project>{77b3033c-cf28-452d-a9a1-33d90f17903d}</Project>
@@ -242,6 +244,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

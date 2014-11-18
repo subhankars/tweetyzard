@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="tweetyzard.databaseModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="tweetyzard.databaseModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityContainer Name="tweetyzarddatabaseModelStoreContainer">
           <EntitySet Name="TweetStore" EntityType="tweetyzard.databaseModel.Store.TweetStore" store:Type="Tables" Schema="dbo" />
         </EntityContainer>
@@ -18,53 +18,52 @@
           <Property Name="CreatorName" Type="varchar" Nullable="false" MaxLength="255" />
           <Property Name="IdStr" Type="varchar" Nullable="false" MaxLength="255" />
           <Property Name="Text" Type="varchar(max)" Nullable="false" />
-          <Property Name="Favorited" Type="bit" Nullable="false" />
-          <Property Name="CreatedAt" Type="datetime" Nullable="false" />
-          <Property Name="Truncated" Type="bit" Nullable="false" />
+          <Property Name="Favorited" Type="bit" />
+          <Property Name="CreatedAt" Type="datetime" />
+          <Property Name="Truncated" Type="bit" />
           <Property Name="InReplyToStatusId" Type="numeric" />
-          <Property Name="InReplyToStatusIdStr" Type="varchar" Nullable="false" MaxLength="1" />
+          <Property Name="InReplyToStatusIdStr" Type="varchar" MaxLength="255" />
           <Property Name="InReplyToUserId" Type="numeric" />
-          <Property Name="InReplyToUserIdStr" Type="varchar" Nullable="false" MaxLength="255" />
-          <Property Name="InReplyToScreenName" Type="varchar" Nullable="false" MaxLength="255" />
-          <Property Name="RetweetCount" Type="int" Nullable="false" />
-          <Property Name="Retweeted" Type="bit" Nullable="false" />
-          <Property Name="Description" Type="varchar(max)" Nullable="false" />
-          <Property Name="Location" Type="varchar" Nullable="false" MaxLength="255" />
-          <Property Name="GeoEnabled" Type="bit" Nullable="false" />
-          <Property Name="Url" Type="varchar(max)" Nullable="false" />
-          <Property Name="StatusesCount" Type="int" Nullable="false" />
-          <Property Name="FollowersCount" Type="int" Nullable="false" />
-          <Property Name="FriendsCount" Type="int" Nullable="false" />
-          <Property Name="Following" Type="bit" Nullable="false" />
-          <Property Name="Protected" Type="bit" Nullable="false" />
-          <Property Name="Verified" Type="bit" Nullable="false" />
-          <Property Name="Notifications" Type="bit" Nullable="false" />
-          <Property Name="ProfileImageUrl" Type="varchar" Nullable="false" MaxLength="1" />
-          <Property Name="ProfileImageUrlHttps" Type="varchar" Nullable="false" MaxLength="1" />
-          <Property Name="FollowRequestSent" Type="bit" Nullable="false" />
-          <Property Name="DefaultProfile" Type="bit" Nullable="false" />
-          <Property Name="DefaultProfileImage" Type="bit" Nullable="false" />
+          <Property Name="InReplyToUserIdStr" Type="varchar" MaxLength="255" />
+          <Property Name="InReplyToScreenName" Type="varchar" MaxLength="255" />
+          <Property Name="RetweetCount" Type="int" />
+          <Property Name="Retweeted" Type="bit" />
+          <Property Name="Description" Type="varchar(max)" />
+          <Property Name="Location" Type="varchar" MaxLength="255" />
+          <Property Name="GeoEnabled" Type="bit" />
+          <Property Name="Url" Type="varchar(max)" />
+          <Property Name="StatusesCount" Type="int" />
+          <Property Name="FollowersCount" Type="int" />
+          <Property Name="FriendsCount" Type="int" />
+          <Property Name="Following" Type="bit" />
+          <Property Name="Protected" Type="bit" />
+          <Property Name="Verified" Type="bit" />
+          <Property Name="Notifications" Type="bit" />
+          <Property Name="ProfileImageUrl" Type="varchar(max)" />
+          <Property Name="ProfileImageUrlHttps" Type="varchar(max)" />
+          <Property Name="FollowRequestSent" Type="bit" />
+          <Property Name="DefaultProfile" Type="bit" />
+          <Property Name="DefaultProfileImage" Type="bit" />
           <Property Name="FavouritesCount" Type="int" />
           <Property Name="ListedCount" Type="int" />
-          <Property Name="ProfileSidebarFillColor" Type="varchar" Nullable="false" MaxLength="255" />
-          <Property Name="ProfileSidebarBorderColor" Type="varchar" Nullable="false" MaxLength="255" />
-          <Property Name="ProfileBackgroundTitle" Type="varchar" Nullable="false" MaxLength="255" />
-          <Property Name="ProfileBackgroundColor" Type="varchar" Nullable="false" MaxLength="255" />
-          <Property Name="ProfileBackgroundImageUrl" Type="varchar(max)" Nullable="false" />
-          <Property Name="ProfileBackgroundImageUrlHttps" Type="varchar(max)" Nullable="false" />
-          <Property Name="ProfileTextColor" Type="varchar" Nullable="false" MaxLength="255" />
-          <Property Name="ProfileLinkColor" Type="varchar" Nullable="false" MaxLength="255" />
-          <Property Name="ProfileUseBackgroundImage" Type="bit" Nullable="false" />
-          <Property Name="IsTranslator" Type="bit" Nullable="false" />
-          <Property Name="ShowAllInlineMedia" Type="bit" Nullable="false" />
-          <Property Name="ContributorsEnabled" Type="bit" Nullable="false" />
+          <Property Name="ProfileSidebarFillColor" Type="varchar" MaxLength="255" />
+          <Property Name="ProfileSidebarBorderColor" Type="varchar" MaxLength="255" />
+          <Property Name="ProfileBackgroundTitle" Type="varchar" MaxLength="255" />
+          <Property Name="ProfileBackgroundColor" Type="varchar" MaxLength="255" />
+          <Property Name="ProfileBackgroundImageUrl" Type="varchar(max)" />
+          <Property Name="ProfileBackgroundImageUrlHttps" Type="varchar(max)" />
+          <Property Name="ProfileTextColor" Type="varchar" MaxLength="255" />
+          <Property Name="ProfileLinkColor" Type="varchar" MaxLength="255" />
+          <Property Name="ProfileUseBackgroundImage" Type="bit" />
+          <Property Name="IsTranslator" Type="bit" />
+          <Property Name="ShowAllInlineMedia" Type="bit" />
+          <Property Name="ContributorsEnabled" Type="bit" />
           <Property Name="UtcOffset" Type="int" />
-          <Property Name="TimeZone" Type="varchar" Nullable="false" MaxLength="255" />
-          <Property Name="Longitude" Type="float" Nullable="false" />
-          <Property Name="Latitude" Type="float" Nullable="false" />
+          <Property Name="TimeZone" Type="varchar" MaxLength="255" />
+          <Property Name="Longitude" Type="float" />
+          <Property Name="Latitude" Type="float" />
         </EntityType>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="tweetyzard.databaseModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -81,50 +80,50 @@
           <Property Name="CreatorName" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
           <Property Name="IdStr" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
           <Property Name="Text" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
-          <Property Name="Favorited" Type="Boolean" Nullable="false" />
-          <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="Truncated" Type="Boolean" Nullable="false" />
+          <Property Name="Favorited" Type="Boolean" />
+          <Property Name="CreatedAt" Type="DateTime" Precision="3" />
+          <Property Name="Truncated" Type="Boolean" />
           <Property Name="InReplyToStatusId" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="InReplyToStatusIdStr" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="InReplyToStatusIdStr" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
           <Property Name="InReplyToUserId" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="InReplyToUserIdStr" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-          <Property Name="InReplyToScreenName" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-          <Property Name="RetweetCount" Type="Int32" Nullable="false" />
-          <Property Name="Retweeted" Type="Boolean" Nullable="false" />
-          <Property Name="Description" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
-          <Property Name="Location" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-          <Property Name="GeoEnabled" Type="Boolean" Nullable="false" />
-          <Property Name="Url" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
-          <Property Name="StatusesCount" Type="Int32" Nullable="false" />
-          <Property Name="FollowersCount" Type="Int32" Nullable="false" />
-          <Property Name="FriendsCount" Type="Int32" Nullable="false" />
-          <Property Name="Following" Type="Boolean" Nullable="false" />
-          <Property Name="Protected" Type="Boolean" Nullable="false" />
-          <Property Name="Verified" Type="Boolean" Nullable="false" />
-          <Property Name="Notifications" Type="Boolean" Nullable="false" />
-          <Property Name="ProfileImageUrl" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
-          <Property Name="ProfileImageUrlHttps" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
-          <Property Name="FollowRequestSent" Type="Boolean" Nullable="false" />
-          <Property Name="DefaultProfile" Type="Boolean" Nullable="false" />
-          <Property Name="DefaultProfileImage" Type="Boolean" Nullable="false" />
+          <Property Name="InReplyToUserIdStr" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="InReplyToScreenName" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="RetweetCount" Type="Int32" />
+          <Property Name="Retweeted" Type="Boolean" />
+          <Property Name="Description" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="Location" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="GeoEnabled" Type="Boolean" />
+          <Property Name="Url" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="StatusesCount" Type="Int32" />
+          <Property Name="FollowersCount" Type="Int32" />
+          <Property Name="FriendsCount" Type="Int32" />
+          <Property Name="Following" Type="Boolean" />
+          <Property Name="Protected" Type="Boolean" />
+          <Property Name="Verified" Type="Boolean" />
+          <Property Name="Notifications" Type="Boolean" />
+          <Property Name="ProfileImageUrl" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="ProfileImageUrlHttps" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="FollowRequestSent" Type="Boolean" />
+          <Property Name="DefaultProfile" Type="Boolean" />
+          <Property Name="DefaultProfileImage" Type="Boolean" />
           <Property Name="FavouritesCount" Type="Int32" />
           <Property Name="ListedCount" Type="Int32" />
-          <Property Name="ProfileSidebarFillColor" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-          <Property Name="ProfileSidebarBorderColor" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-          <Property Name="ProfileBackgroundTitle" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-          <Property Name="ProfileBackgroundColor" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-          <Property Name="ProfileBackgroundImageUrl" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
-          <Property Name="ProfileBackgroundImageUrlHttps" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
-          <Property Name="ProfileTextColor" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-          <Property Name="ProfileLinkColor" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-          <Property Name="ProfileUseBackgroundImage" Type="Boolean" Nullable="false" />
-          <Property Name="IsTranslator" Type="Boolean" Nullable="false" />
-          <Property Name="ShowAllInlineMedia" Type="Boolean" Nullable="false" />
-          <Property Name="ContributorsEnabled" Type="Boolean" Nullable="false" />
+          <Property Name="ProfileSidebarFillColor" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="ProfileSidebarBorderColor" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="ProfileBackgroundTitle" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="ProfileBackgroundColor" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="ProfileBackgroundImageUrl" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="ProfileBackgroundImageUrlHttps" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="ProfileTextColor" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="ProfileLinkColor" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="ProfileUseBackgroundImage" Type="Boolean" />
+          <Property Name="IsTranslator" Type="Boolean" />
+          <Property Name="ShowAllInlineMedia" Type="Boolean" />
+          <Property Name="ContributorsEnabled" Type="Boolean" />
           <Property Name="UtcOffset" Type="Int32" />
-          <Property Name="TimeZone" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
-          <Property Name="Longitude" Type="Double" Nullable="false" />
-          <Property Name="Latitude" Type="Double" Nullable="false" />
+          <Property Name="TimeZone" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="Longitude" Type="Double" />
+          <Property Name="Latitude" Type="Double" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>

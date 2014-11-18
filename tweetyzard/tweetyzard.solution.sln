@@ -35,8 +35,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UX API", "UX API", "{AE097E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{503C1EAF-736E-4418-830F-21F14E60DD2F}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ServiceApi", "ServiceApi", "{57DDDF4F-8868-49F3-B17A-D116BE8ADE99}"
-EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "tweetyzard.database", "tweetyzard.database\tweetyzard.database.sqlproj", "{C3C56532-7529-4685-B3AE-AA33179F8973}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataAccess", "DataAccess", "{ED11BFEA-2848-4C31-B240-F82FB4345405}"
@@ -45,13 +43,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tweetyzard.dataaccess", "tw
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tweetyzard.domain", "tweetyzard.domain\tweetyzard.domain.csproj", "{3377BF7D-77A8-4B6B-8F9E-00FA2F80A704}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tweetyzard.webapi", "tweetyzard.webapi\tweetyzard.webapi.csproj", "{132139E5-7226-45DC-BED5-C6BE7192FA19}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "twetyzard.utility", "twetyzard.utility\twetyzard.utility.csproj", "{997349F7-2529-435D-BCCA-5292FC929B3E}"
 EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 19
+		SccNumberOfProjects = 18
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs16
 		SccLocalPath0 = .
@@ -119,14 +115,10 @@ Global
 		SccProjectTopLevelParentUniqueName16 = tweetyzard.solution.sln
 		SccProjectName16 = tweetyzard.domain
 		SccLocalPath16 = tweetyzard.domain
-		SccProjectUniqueName17 = tweetyzard.webapi\\tweetyzard.webapi.csproj
+		SccProjectUniqueName17 = twetyzard.utility\\twetyzard.utility.csproj
 		SccProjectTopLevelParentUniqueName17 = tweetyzard.solution.sln
-		SccProjectName17 = tweetyzard.webapi
-		SccLocalPath17 = tweetyzard.webapi
-		SccProjectUniqueName18 = twetyzard.utility\\twetyzard.utility.csproj
-		SccProjectTopLevelParentUniqueName18 = tweetyzard.solution.sln
-		SccProjectName18 = twetyzard.utility
-		SccLocalPath18 = twetyzard.utility
+		SccProjectName17 = twetyzard.utility
+		SccLocalPath17 = twetyzard.utility
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -199,10 +191,6 @@ Global
 		{3377BF7D-77A8-4B6B-8F9E-00FA2F80A704}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3377BF7D-77A8-4B6B-8F9E-00FA2F80A704}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3377BF7D-77A8-4B6B-8F9E-00FA2F80A704}.Release|Any CPU.Build.0 = Release|Any CPU
-		{132139E5-7226-45DC-BED5-C6BE7192FA19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{132139E5-7226-45DC-BED5-C6BE7192FA19}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{132139E5-7226-45DC-BED5-C6BE7192FA19}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{132139E5-7226-45DC-BED5-C6BE7192FA19}.Release|Any CPU.Build.0 = Release|Any CPU
 		{997349F7-2529-435D-BCCA-5292FC929B3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{997349F7-2529-435D-BCCA-5292FC929B3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{997349F7-2529-435D-BCCA-5292FC929B3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -227,7 +215,6 @@ Global
 		{5A2FCAE8-C2FA-41BD-90EA-16103EA07B26} = {AE097E8B-4327-4700-A505-5E377937A785}
 		{BB41AC8B-CBED-4387-A7E0-4567EDB3F57F} = {AE097E8B-4327-4700-A505-5E377937A785}
 		{C3C56532-7529-4685-B3AE-AA33179F8973} = {503C1EAF-736E-4418-830F-21F14E60DD2F}
-		{132139E5-7226-45DC-BED5-C6BE7192FA19} = {57DDDF4F-8868-49F3-B17A-D116BE8ADE99}
 		{0D1D7A61-5326-4D68-87C7-CA6E6A7D93CB} = {ED11BFEA-2848-4C31-B240-F82FB4345405}
 		{3377BF7D-77A8-4B6B-8F9E-00FA2F80A704} = {ED11BFEA-2848-4C31-B240-F82FB4345405}
 	EndGlobalSection

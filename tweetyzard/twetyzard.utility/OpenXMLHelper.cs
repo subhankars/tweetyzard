@@ -70,10 +70,10 @@ namespace twetyzard.utility
                     using (ds)
                     {
                         var tableNames = ds.Tables[ds.Tables.Count - 1];
+                        var sheetName = Convert.ToString(tableNames.Rows[0]["SearchPhrase"]);
                         for (var i = 0; i < ds.Tables.Count; i++)
                         {
-                            var sheetName = Convert.ToString(tableNames.Rows[i][0]);
-                            AddSheet(ds.Tables[i], spreadsheetDocument, sheetName, headerCellFormatIndex, cellCellFormatIndex);
+                            AddSheet(ds.Tables[i], spreadsheetDocument, sheetName.Substring(0,10), headerCellFormatIndex, cellCellFormatIndex);
                         }
                     }
                 }
