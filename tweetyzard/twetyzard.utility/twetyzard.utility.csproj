@@ -53,8 +53,8 @@
   <ItemGroup>
     <Compile Include="OpenXMLHelper.cs" />
     <Compile Include="ExcelColumn.cs" />
-    <Compile Include="PrintFormatting.Designer.cs">
-      <DependentUpon>PrintFormatting.resx</DependentUpon>
+    <Compile Include="ExcelFormatting.Designer.cs">
+      <DependentUpon>ExcelFormatting.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
@@ -72,9 +72,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="PrintFormatting.resx">
+    <EmbeddedResource Include="ExcelFormatting.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>PrintFormatting.Designer.cs</LastGenOutput>
+      <LastGenOutput>ExcelFormatting.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>

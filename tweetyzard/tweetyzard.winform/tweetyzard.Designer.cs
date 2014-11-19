@@ -42,9 +42,10 @@
             this.toolTipTw = new System.Windows.Forms.ToolTip(this.components);
             this.btnExport = new System.Windows.Forms.Button();
             this.ExportToDb = new System.Windows.Forms.Button();
+            this.CopyTrendToSearch = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.StopStreamButton = new System.Windows.Forms.Button();
-            this.StartStreamButton = new System.Windows.Forms.Button();
+            this.btnStopStream = new System.Windows.Forms.Button();
+            this.btnStartStream = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
             this.geoFlag = new System.Windows.Forms.CheckBox();
@@ -55,7 +56,6 @@
             this.lblStream = new System.Windows.Forms.Label();
             this.tweetsTextBox = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.CopyTrendToSearch = new System.Windows.Forms.Button();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.trendTimer = new System.Windows.Forms.Timer(this.components);
             this.trendingTopics = new System.Windows.Forms.Label();
@@ -172,6 +172,25 @@
             this.ExportToDb.UseVisualStyleBackColor = false;
             this.ExportToDb.Click += new System.EventHandler(this.ExportToDb_Click);
             // 
+            // CopyTrendToSearch
+            // 
+            this.CopyTrendToSearch.BackColor = System.Drawing.Color.White;
+            this.CopyTrendToSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CopyTrendToSearch.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.CopyTrendToSearch.FlatAppearance.BorderSize = 0;
+            this.CopyTrendToSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.CopyTrendToSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CopyTrendToSearch.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CopyTrendToSearch.ForeColor = System.Drawing.Color.Transparent;
+            this.CopyTrendToSearch.Image = ((System.Drawing.Image)(resources.GetObject("CopyTrendToSearch.Image")));
+            this.CopyTrendToSearch.Location = new System.Drawing.Point(7, 88);
+            this.CopyTrendToSearch.Name = "CopyTrendToSearch";
+            this.CopyTrendToSearch.Size = new System.Drawing.Size(25, 25);
+            this.CopyTrendToSearch.TabIndex = 39;
+            this.toolTipTw.SetToolTip(this.CopyTrendToSearch, "Use this topic for search");
+            this.CopyTrendToSearch.UseVisualStyleBackColor = false;
+            this.CopyTrendToSearch.Click += new System.EventHandler(this.CopyTrendToSearch_Click);
+            // 
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
@@ -181,42 +200,42 @@
             this.pictureBox5.TabIndex = 21;
             this.pictureBox5.TabStop = false;
             // 
-            // StopStreamButton
+            // btnStopStream
             // 
-            this.StopStreamButton.BackColor = System.Drawing.Color.White;
-            this.StopStreamButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.StopStreamButton.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.StopStreamButton.FlatAppearance.BorderSize = 0;
-            this.StopStreamButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.StopStreamButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.StopStreamButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StopStreamButton.ForeColor = System.Drawing.Color.Transparent;
-            this.StopStreamButton.Image = ((System.Drawing.Image)(resources.GetObject("StopStreamButton.Image")));
-            this.StopStreamButton.Location = new System.Drawing.Point(673, 88);
-            this.StopStreamButton.Name = "StopStreamButton";
-            this.StopStreamButton.Size = new System.Drawing.Size(25, 25);
-            this.StopStreamButton.TabIndex = 27;
-            this.StopStreamButton.UseVisualStyleBackColor = false;
-            this.StopStreamButton.Click += new System.EventHandler(this.StopStreamButton_Click);
+            this.btnStopStream.BackColor = System.Drawing.Color.White;
+            this.btnStopStream.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStopStream.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.btnStopStream.FlatAppearance.BorderSize = 0;
+            this.btnStopStream.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnStopStream.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStopStream.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStopStream.ForeColor = System.Drawing.Color.Transparent;
+            this.btnStopStream.Image = ((System.Drawing.Image)(resources.GetObject("btnStopStream.Image")));
+            this.btnStopStream.Location = new System.Drawing.Point(673, 88);
+            this.btnStopStream.Name = "btnStopStream";
+            this.btnStopStream.Size = new System.Drawing.Size(25, 25);
+            this.btnStopStream.TabIndex = 27;
+            this.btnStopStream.UseVisualStyleBackColor = false;
+            this.btnStopStream.Click += new System.EventHandler(this.btnStopStream_Click);
             // 
-            // StartStreamButton
+            // btnStartStream
             // 
-            this.StartStreamButton.BackColor = System.Drawing.Color.White;
-            this.StartStreamButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.StartStreamButton.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.StartStreamButton.FlatAppearance.BorderSize = 0;
-            this.StartStreamButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.StartStreamButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.StartStreamButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StartStreamButton.ForeColor = System.Drawing.Color.Transparent;
-            this.StartStreamButton.Image = ((System.Drawing.Image)(resources.GetObject("StartStreamButton.Image")));
-            this.StartStreamButton.Location = new System.Drawing.Point(645, 88);
-            this.StartStreamButton.Name = "StartStreamButton";
-            this.StartStreamButton.Size = new System.Drawing.Size(25, 25);
-            this.StartStreamButton.TabIndex = 26;
-            this.StartStreamButton.Tag = "";
-            this.StartStreamButton.UseVisualStyleBackColor = false;
-            this.StartStreamButton.Click += new System.EventHandler(this.StartStreamClicked);
+            this.btnStartStream.BackColor = System.Drawing.Color.White;
+            this.btnStartStream.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStartStream.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.btnStartStream.FlatAppearance.BorderSize = 0;
+            this.btnStartStream.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnStartStream.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStartStream.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStartStream.ForeColor = System.Drawing.Color.Transparent;
+            this.btnStartStream.Image = ((System.Drawing.Image)(resources.GetObject("btnStartStream.Image")));
+            this.btnStartStream.Location = new System.Drawing.Point(645, 88);
+            this.btnStartStream.Name = "btnStartStream";
+            this.btnStartStream.Size = new System.Drawing.Size(25, 25);
+            this.btnStartStream.TabIndex = 26;
+            this.btnStartStream.Tag = "";
+            this.btnStartStream.UseVisualStyleBackColor = false;
+            this.btnStartStream.Click += new System.EventHandler(this.btnStartStream_Click);
             // 
             // btnSearch
             // 
@@ -347,25 +366,6 @@
             this.pictureBox3.TabIndex = 38;
             this.pictureBox3.TabStop = false;
             // 
-            // CopyTrendToSearch
-            // 
-            this.CopyTrendToSearch.BackColor = System.Drawing.Color.White;
-            this.CopyTrendToSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CopyTrendToSearch.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.CopyTrendToSearch.FlatAppearance.BorderSize = 0;
-            this.CopyTrendToSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.CopyTrendToSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CopyTrendToSearch.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CopyTrendToSearch.ForeColor = System.Drawing.Color.Transparent;
-            this.CopyTrendToSearch.Image = ((System.Drawing.Image)(resources.GetObject("CopyTrendToSearch.Image")));
-            this.CopyTrendToSearch.Location = new System.Drawing.Point(7, 88);
-            this.CopyTrendToSearch.Name = "CopyTrendToSearch";
-            this.CopyTrendToSearch.Size = new System.Drawing.Size(25, 25);
-            this.CopyTrendToSearch.TabIndex = 39;
-            this.toolTipTw.SetToolTip(this.CopyTrendToSearch, "Send this topic for search");
-            this.CopyTrendToSearch.UseVisualStyleBackColor = false;
-            this.CopyTrendToSearch.Click += new System.EventHandler(this.CopyTrendToSearch_Click);
-            // 
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
@@ -413,8 +413,8 @@
             this.Controls.Add(this.ExportToDb);
             this.Controls.Add(this.btnExport);
             this.Controls.Add(this.searchPhraseTextBox);
-            this.Controls.Add(this.StopStreamButton);
-            this.Controls.Add(this.StartStreamButton);
+            this.Controls.Add(this.btnStopStream);
+            this.Controls.Add(this.btnStartStream);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.pbUser);
@@ -456,8 +456,8 @@
         private System.Windows.Forms.PictureBox pbUser;
         private System.Windows.Forms.ToolTip toolTipTw;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Button StopStreamButton;
-        private System.Windows.Forms.Button StartStreamButton;
+        private System.Windows.Forms.Button btnStopStream;
+        private System.Windows.Forms.Button btnStartStream;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.CheckBox geoFlag;

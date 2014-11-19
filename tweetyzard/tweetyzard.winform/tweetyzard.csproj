@@ -15,6 +15,7 @@
     <SccLocalPath>SAK</SccLocalPath>
     <SccAuxPath>SAK</SccAuxPath>
     <SccProvider>SAK</SccProvider>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -27,7 +28,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -51,7 +51,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>favicontw.ico</ApplicationIcon>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -146,13 +146,11 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="favicontw.ico" />
+    <Content Include="favicon.ico" />
     <Content Include="LocalResources\add_database.png" />
     <Content Include="LocalResources\clock.png" />
     <Content Include="LocalResources\cog.png" />
     <Content Include="LocalResources\edit_allow.png" />
-    <Content Include="LocalResources\favicon.ico" />
-    <Content Include="LocalResources\favicontw.ico" />
     <Content Include="LocalResources\Finance-Icon.png" />
     <Content Include="LocalResources\geotag.png" />
     <Content Include="LocalResources\globe.png" />

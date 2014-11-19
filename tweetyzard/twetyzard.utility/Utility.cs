@@ -14,10 +14,9 @@ namespace tweetyzard.utility
 {
     public static class Utility
     {
-        //public static CustomTweetDomain MapStreamedTweetToTweetDomain(ITweet streamedTweet, string searchPhrase)
         public static TweetStore MapStreamedTweetToTweetDomain(ITweet streamedTweet, string searchPhrase)
         {
-           // CustomTweetDomain tweetDomain = new CustomTweetDomain();
+          
             TweetStore tweetDomain = new TweetStore();
 
             if (streamedTweet == null)
@@ -25,7 +24,7 @@ namespace tweetyzard.utility
                 throw new ArgumentNullException("ITweet is null");
             }
 
-            //tweetDomain = new CustomTweetDomain();
+            
             tweetDomain = new TweetStore();
 
             tweetDomain.SearchPhrase = searchPhrase;
@@ -99,56 +98,37 @@ namespace tweetyzard.utility
             return tweetDomain;
         }
 
-        /// <summary>
-        /// Converts a Generic list to DataTable
-        /// </summary>
-        /// <typeparam name="T">generic type T</typeparam>
-        /// <param name="data">List of T</param>
-        /// <param name="tableName">table name</param>
-        /// <returns>Data Table</returns>
-        public static DataTable ToDataTable<T>(this IList<T> data, string tableName)
+        public static DataTable ConvertToDataTable<T>(this IList<T> listData, string tableName)
         {
-            return ToDataTable<T>(data, tableName, true);
-        }
+            PropertyInfo[] propInfo = null;
 
-        /// <summary>
-        /// Converts a Generic list to DataTable
-        /// </summary>
-        /// <typeparam name="T">generic type T</typeparam>
-        /// <param name="data">List of T</param>
-        /// <param name="tableName">table name</param>
-        /// <param name="isDeleteIdField">true / false</param>
-        /// <returns>Data Table</returns>
-        public static DataTable ToDataTable<T>(this IList<T> data, string tableName, bool isDeleteIdField)
-        {
-            PropertyInfo[] props = null;
-            if (data != null)
+            if (listData != null)
             {
-                var sortedProperties = data[0].GetType()
+                var sortedProperties = listData[0].GetType()
                     .GetProperties(BindingFlags.Instance | BindingFlags.Public)
                     .OrderBy(x => x.MetadataToken);
-                props = sortedProperties.ToArray();
+                propInfo = sortedProperties.ToArray();
             }
 
             using (DataTable table = new DataTable())
             {
                 table.Locale = CultureInfo.InvariantCulture;
                 table.TableName = tableName;
-                long count = props.LongLength;
+                long count = propInfo.LongLength;
                 for (int i = 0; i < count; i++)
                 {
-                    PropertyInfo prop = props[i];
+                    PropertyInfo prop = propInfo[i];
                     table.Columns.Add(prop.Name, Nullable.GetUnderlyingType(prop.PropertyType) ?? prop.PropertyType);
                 }
 
                 object[] values = new object[table.Columns.Count];
-                if (data != null)
+                if (listData != null)
                 {
-                    foreach (T item in data)
+                    foreach (T item in listData)
                     {
                         for (int i = 0; i < values.Length; i++)
                         {
-                            values[i] = props[i].GetValue(item) ?? DBNull.Value;
+                            values[i] = propInfo[i].GetValue(item) ?? DBNull.Value;
                         }
                         table.Rows.Add(values);
                     }
@@ -158,31 +138,5 @@ namespace tweetyzard.utility
             }
         }
 
-        public static Stream SerializeCompressToStream<T>(object data)
-        {
-            DataContractSerializer serializerObj = new DataContractSerializer(typeof(T));
-            MemoryStream ms = new MemoryStream();
-            serializerObj.WriteObject(ms, data);
-            byte[] b = ms.ToArray();
-
-            using (MemoryStream memory = new MemoryStream())
-            {
-                using (GZipStream gzip = new GZipStream(memory, CompressionMode.Compress, true))
-                {
-                    gzip.Write(b, 0, b.Length);
-                }
-
-                return new MemoryStream(memory.ToArray());
-            }
-        }
-
-        public static object DecompressDeserialize<T>(Stream inputStream)
-        {
-            using (System.IO.Compression.GZipStream s = new System.IO.Compression.GZipStream(inputStream, System.IO.Compression.CompressionMode.Decompress))
-            {
-                System.Runtime.Serialization.DataContractSerializer dcSerializer = new System.Runtime.Serialization.DataContractSerializer(typeof(T));
-                return dcSerializer.ReadObject(s);
-            }
-        }
     }
 }

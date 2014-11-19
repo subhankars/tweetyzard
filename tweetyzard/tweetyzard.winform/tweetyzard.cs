@@ -37,24 +37,28 @@ namespace tweetyzard.utility
         {
             InitializeComponent();
             searchPhraseTextBox.Focus();
-            TwitterCredentials.Credentials = TwitterCredentials.CreateCredentials(userKey, userSecret, consumerKey, consumerSecret);
+
+            try
+            {
+                TwitterCredentials.Credentials = TwitterCredentials.CreateCredentials(userKey, userSecret, consumerKey, consumerSecret);
+            }
+            catch
+            {
+                MessageBox.Show("Exception occured at authentication");
+                return;
+            }
             
             var loggedUser = User.GetLoggedUser();
             
             if (loggedUser != null)
             {
                 userNameLabel.Visible = true;
-                //profileImage.Visible = true;
-                //welcomeLabel.Visible = true;
                 pbUser.Visible = true;
                 userNameLabel.Text = loggedUser.Name;
-               // profileImage.ImageLocation = loggedUser.UserDTO.ProfileImageUrl;
             }
             else
             {
                 userNameLabel.Visible = false;
-                //profileImage.Visible = false;
-                //welcomeLabel.Visible = false;
                 pbUser.Visible = false;
             }
 
@@ -68,20 +72,27 @@ namespace tweetyzard.utility
                                            .ToString();
             versionInfo.Text = version;
 
-            trendingTopics.Text = "";
-            var trendsController = TweetinviContainer.Resolve<ITrendsController>();
-            IPlaceTrends placeTrends = trendsController.GetPlaceTrendsAt(1);
-
-            if (placeTrends != null)
+            try
             {
-                trends = placeTrends.Trends;
+                trendingTopics.Text = "";
+                var trendsController = TweetinviContainer.Resolve<ITrendsController>();
+                IPlaceTrends placeTrends = trendsController.GetPlaceTrendsAt(1);
+
+                if (placeTrends != null)
+                {
+                    trends = placeTrends.Trends;
+                }
+            }
+            catch
+            {
+                trendingTopics.Text = "";
             }
 
-            toolTipTw.SetToolTip(this.StartStreamButton, "Starts the stream of tweets for the given keyword using Stream API");
+            toolTipTw.SetToolTip(this.btnStartStream, "Starts the stream of tweets for the given keyword using Stream API");
             toolTipTw.SetToolTip(this.btnSearch, "Searches tweets for the given keyword using Search API");
             toolTipTw.SetToolTip(this.btnExport, "Exports gathered tweets to choosen datasource");
             toolTipTw.SetToolTip(this.btnReset, "Refreshes the form");
-            toolTipTw.SetToolTip(this.StopStreamButton, "Stops the running search query");
+            toolTipTw.SetToolTip(this.btnStopStream, "Stops the running search query");
             toolTipTw.SetToolTip(this.geoFlag, "Searches tweets which are only geo tagged");
             
         }
@@ -99,7 +110,6 @@ namespace tweetyzard.utility
                     {
                         tweet = (ITweet)progressChangedEventArgs.UserState;
 
-                        ////Remove searching... text as soon as a tweet is found
                         if (nbTweetDetected == 1 && tweetsTextBox.Text.Length > 0)
                         {
                             tweetsTextBox.Text = "";
@@ -155,7 +165,7 @@ namespace tweetyzard.utility
             }
         }
 
-        private void StartStreamClicked(object sender, EventArgs e)
+        private void btnStartStream_Click(object sender, EventArgs e)
         {
 
             if (searchPhraseTextBox.Text.Length < 1)
@@ -170,10 +180,11 @@ namespace tweetyzard.utility
             listOfGatheredTweets = new List<TweetStore>();
             tweetsTextBox.Text = "";
             tweetsTextBox.Text = "Searching for tweets...\n\n";
-            StartStreamButton.Enabled = false;
+            btnStartStream.Enabled = false;
             searchPhraseTextBox.Enabled = false;
             geoFlag.Enabled = false;
             btnExport.Enabled = false;
+            btnSearch.Enabled = false;
 
             backgroundWorker = new BackgroundWorker();
 
@@ -196,7 +207,7 @@ namespace tweetyzard.utility
 
         private void SearchBackgroundWorkerOnRunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            StartStreamButton.Enabled = true;
+            btnStartStream.Enabled = true;
             searchPhraseTextBox.Enabled = true;
             btnExport.Enabled = true;
             ExportToDb.Enabled = true;
@@ -242,7 +253,7 @@ namespace tweetyzard.utility
             searchParams.Lang = Language.English;
             searchParams.SearchType = SearchResultType.Recent;
             searchParams.Until = DateTime.Today;
-            searchParams.MaximumNumberOfResults = 10000;
+            searchParams.MaximumNumberOfResults = 1000;
             List<ITweet> searchedTweets = Search.SearchTweets(searchParams);
 
 
@@ -254,29 +265,35 @@ namespace tweetyzard.utility
                     backgroundWorkerSearch.ReportProgress(++searchedTweet, tweet);
                 }
             }
+            else
+            {
+                tweetsTextBox.Text = "";
+                tweetsTextBox.Text = "No tweets found. \n\n";
+            }
 
         }
 
         private void BackgroundWorkerOnRunWorkerCompleted(object sender, RunWorkerCompletedEventArgs runWorkerCompletedEventArgs)
         {
-            StartStreamButton.Enabled = true;
+            btnStartStream.Enabled = true;
         }
 
-        private void StopStreamButton_Click(object sender, EventArgs e)
+        private void btnStopStream_Click(object sender, EventArgs e)
         {
             if (backgroundWorker.IsBusy)
             {
                 backgroundWorker.CancelAsync();
                 if (listOfGatheredTweets.Count > 0)
                 {
-                    tweetsTextBox.AppendText("\r\n***** Stream Stopped. You can export the data now *****");
+                    tweetsTextBox.AppendText("\r\n --- Stream Stopped, You can export the data to excel or to database now ---");
                     tweetsTextBox.SelectionStart = tweetsTextBox.TextLength;
                     tweetsTextBox.ScrollToCaret();
                 }
 
                 lblStream.ForeColor = Color.DimGray;
                 searchPhraseTextBox.Focus();
-                StartStreamButton.Enabled = true;
+                btnStartStream.Enabled = true;
+                btnSearch.Enabled = true;
                 searchPhraseTextBox.Enabled = true;
                 btnExport.Enabled = true;
                 ExportToDb.Enabled = true;
@@ -301,10 +318,10 @@ namespace tweetyzard.utility
                 {
                     DataSet dsTweetContainer = new DataSet();
                     tweetsTextBox.AppendText("\r\n Exporting your data to excel. Please wait...");
-                    dsTweetContainer.Tables.Add(Utility.ToDataTable(listOfGatheredTweets, "TweetyzardExport"));
+                    dsTweetContainer.Tables.Add(Utility.ConvertToDataTable(listOfGatheredTweets, "TweetyzardExport"));
                     using (dsTweetContainer)
                     {
-                        OpenXMLHelper.ExportDataSetToExcel(dsTweetContainer, dlg.FileName);
+                        OpenXMLHelper.ExportDataSetToExcel(dsTweetContainer, dlg.FileName, true);
                         tweetsTextBox.AppendText("\r\n Your data has been exported to: " + dlg.FileName);
                         tweetsTextBox.SelectionStart = tweetsTextBox.TextLength;
                         tweetsTextBox.ScrollToCaret();
@@ -334,7 +351,7 @@ namespace tweetyzard.utility
         {
             lblStream.ForeColor = Color.DimGray;
             searchPhraseTextBox.Focus();
-            StartStreamButton.Enabled = true;
+            btnStartStream.Enabled = true;
             searchPhraseTextBox.Enabled = true;
             btnExport.Enabled = false;
             ExportToDb.Enabled = false;
@@ -377,7 +394,7 @@ namespace tweetyzard.utility
                 listOfGatheredTweets = new List<TweetStore>();
                 tweetsTextBox.Text = "";
                 tweetsTextBox.Text = "Searching for tweets...\n\n";
-                StartStreamButton.Enabled = false;
+                btnStartStream.Enabled = false;
                 searchPhraseTextBox.Enabled = false;
                 geoFlag.Enabled = false;
                 btnExport.Enabled = false;
@@ -391,26 +408,42 @@ namespace tweetyzard.utility
 
         private void ExportToDb_Click(object sender, EventArgs e)
         {
-            if (DatabaseHelper.SqlBulkInsert("TweetStore", Utility.ToDataTable(listOfGatheredTweets, "TweetStore")))
+            try
             {
-                tweetsTextBox.AppendText("\r\n Your data has been exported to database");
+                if (DatabaseHelper.SqlBulkInsert("TweetStore", Utility.ConvertToDataTable(listOfGatheredTweets, "TweetStore")))
+                {
+                    tweetsTextBox.AppendText("\r\n Your data has been exported to database");
+                }
+                else
+                {
+                    tweetsTextBox.AppendText("\r\n Something went wrong while saving data to database");
+                }
             }
-            else
+            catch (Exception)
             {
-                tweetsTextBox.AppendText("\r\n Something went wrong while saving data to database");
+                MessageBox.Show("Exception occured while saving to database");
+                return;
             }
         }
 
         private void trendTimer_Tick(object sender, EventArgs e)
         {
-            while (fetch != 10)
+            try
             {
-                trendingTopics.Text = trends[fetch].Name;
-                fetch++;
-                if (fetch == 10)
+                while (fetch != 10)
                 {
-                    fetch = 0;
+                    trendingTopics.Text = trends[fetch].Name;
+                    fetch++;
+                    if (fetch == 10)
+                    {
+                        fetch = 0;
+                    }
+                    return;
                 }
+            }
+            catch
+            {
+                trendTimer.Stop();
                 return;
             }
 
@@ -439,13 +472,12 @@ namespace tweetyzard.utility
                     trendTimer.Start();
                 }
             }
-            catch (Exception ex)
+            catch
             {
                 return;
             }
-
-
         } 
+
         #endregion
         
     }
