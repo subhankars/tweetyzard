@@ -73,10 +73,6 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="Streaminvi, Version=0.9.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\TweetinviAPI.0.9.0.1\lib\Streaminvi.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
@@ -214,6 +210,10 @@
     <ProjectReference Include="..\tweetyzard.Logic\TweetinviLogic.csproj">
       <Project>{58567cc3-67d4-47bd-94d8-1e1e5cdd71c6}</Project>
       <Name>TweetinviLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\tweetyzard.Streaminvi\Streaminvi.csproj">
+      <Project>{60696520-c228-46c3-93b0-5048853b124a}</Project>
+      <Name>Streaminvi</Name>
     </ProjectReference>
     <ProjectReference Include="..\tweetyzard.Tweetinvi\Tweetinvi.csproj">
       <Project>{77b3033c-cf28-452d-a9a1-33d90f17903d}</Project>

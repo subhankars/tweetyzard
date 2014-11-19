@@ -36,7 +36,7 @@
   <ItemGroup>
     <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\VsOnline2014\VsOnline14\tweetyzard\tweetyzard\packages\DocumentFormat.OpenXml.dll</HintPath>
+      <HintPath>..\packages\OpenXML\DocumentFormat.OpenXml.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
