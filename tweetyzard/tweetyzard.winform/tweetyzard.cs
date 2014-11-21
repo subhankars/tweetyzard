@@ -98,6 +98,7 @@ namespace tweetyzard.utility
         }
 
         #region PrivateMethods
+        private int tweetCounter = 0;
         private void BackgroundWorkerOnProgressChanged(object sender, ProgressChangedEventArgs progressChangedEventArgs)
         {
             try
@@ -115,13 +116,20 @@ namespace tweetyzard.utility
                             tweetsTextBox.Text = "";
                         }
 
+                        ////Refresh tweetsTextBox after every 1000 tweets
+                        if (tweetCounter == 1000)
+                        {
+                            tweetsTextBox.ResetText();
+                            tweetCounter = 0;
+                        }
+                        tweetCounter++;
+
                         tweetsTextBox.AppendText(nbTweetDetected.ToString() + String.Format(". {0} :  {1}\r\n", Convert.ToString(tweet.Creator.Name), Convert.ToString(tweet.Text)) + "\n");
                         tweetsTextBox.SelectionStart = tweetsTextBox.TextLength;
                         tweetsTextBox.ScrollToCaret();
                         tweetCount.Text = nbTweetDetected.ToString("#,##0");
                         lblStream.Text = "Live Streaming...";
                         lblStream.ForeColor = Color.Teal;
-
                         listOfGatheredTweets.Add(Utility.MapStreamedTweetToTweetDomain((ITweet)progressChangedEventArgs.UserState, searchPhraseTextBox.Text));
                     }
                 }
@@ -188,7 +196,7 @@ namespace tweetyzard.utility
 
             backgroundWorker = new BackgroundWorker();
 
-            if (!backgroundWorker.IsBusy && !backgroundWorkerSearch.IsBusy)
+            if (!backgroundWorker.IsBusy)
             {
                 backgroundWorker = new BackgroundWorker();
                 backgroundWorker.WorkerSupportsCancellation = true;
