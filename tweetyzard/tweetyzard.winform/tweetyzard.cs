@@ -22,10 +22,10 @@ namespace tweetyzard.utility
     public partial class tweetyzard : MetroForm
     {
         #region Private fields
-        private string userKey = System.Configuration.ConfigurationManager.AppSettings["userKey"].ToString();
-        private string userSecret = System.Configuration.ConfigurationManager.AppSettings["userSecret"].ToString();
-        private string consumerKey = System.Configuration.ConfigurationManager.AppSettings["consumerKey"].ToString();
-        private string consumerSecret = System.Configuration.ConfigurationManager.AppSettings["consumerSecret"].ToString();
+        private string accessToken = System.Configuration.ConfigurationManager.AppSettings["AccessToken"].ToString();
+        private string accessTokenSecret = System.Configuration.ConfigurationManager.AppSettings["AccessTokenSecret"].ToString();
+        private string consumerKey = System.Configuration.ConfigurationManager.AppSettings["ConsumerKey"].ToString();
+        private string consumerSecret = System.Configuration.ConfigurationManager.AppSettings["ConsumerSecret"].ToString();
         private int nbTweetDetected = 0;
         private int searchedTweet = 0;
         private List<ITrend> trends;
@@ -40,7 +40,7 @@ namespace tweetyzard.utility
 
             try
             {
-                TwitterCredentials.Credentials = TwitterCredentials.CreateCredentials(userKey, userSecret, consumerKey, consumerSecret);
+                TwitterCredentials.Credentials = TwitterCredentials.CreateCredentials(accessToken, accessTokenSecret, consumerKey, consumerSecret);
             }
             catch
             {
