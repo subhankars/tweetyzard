@@ -3,10 +3,12 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Windows.Forms;
+using tweetyzard.dataaccess;
 using Tweetinvi;
 using TweetinviCore.Enum;
 using TweetinviCore.Interfaces;
@@ -130,7 +132,16 @@ namespace tweetyzard.utility
                         tweetCount.Text = nbTweetDetected.ToString("#,##0");
                         lblStream.Text = "Live Streaming...";
                         lblStream.ForeColor = Color.Teal;
-                        listOfGatheredTweets.Add(Utility.MapStreamedTweetToTweetDomain((ITweet)progressChangedEventArgs.UserState, searchPhraseTextBox.Text));
+                        var tweetStore = Utility.MapStreamedTweetToTweetDomain((ITweet)progressChangedEventArgs.UserState, searchPhraseTextBox.Text);
+                        listOfGatheredTweets.Add(tweetStore);
+                        if (System.Configuration.ConfigurationManager.AppSettings["SaveStreamToDatabase"].ToString() == "true")
+                        {
+                            using (var dbCtx = new Entities())
+                            {
+                                dbCtx.TweetStore.Add(tweetStore);
+                                dbCtx.SaveChanges();
+                            } 
+                        }
                     }
                 }
             }

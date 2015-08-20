@@ -318,7 +318,7 @@
             // 
             this.tweetCount.AutoSize = true;
             this.tweetCount.Font = new System.Drawing.Font("Segoe UI Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tweetCount.Location = new System.Drawing.Point(744, 7);
+            this.tweetCount.Location = new System.Drawing.Point(738, 7);
             this.tweetCount.Name = "tweetCount";
             this.tweetCount.Size = new System.Drawing.Size(13, 13);
             this.tweetCount.TabIndex = 22;
