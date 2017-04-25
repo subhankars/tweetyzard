@@ -1,0 +1,16 @@
+<div class="wikidoc">
+<h3><strong>Setup Instruction.</strong><span style="text-decoration:underline"><strong><br>
+</strong></span></h3>
+<p><em><strong>Setup application keys:</strong></em></p>
+<p>Create your twitter app and get the secret keys form&nbsp;<a href="https://apps.twitter.com/">https://apps.twitter.com/</a>&nbsp;and edit the App.Config of Presentation/tweetyzard project and change the below keys:</p>
+<p>&lt;add key=&quot;AccessToken&quot; value=&quot;YourAppAccessToken&quot; /&gt;<br>
+&lt;add key=&quot;AccessTokenSecret&quot; value=&quot;YourAppAccessTokenSecret&quot; /&gt;<br>
+&lt;add key=&quot;ConsumerKey&quot; value=&quot;YourAppConsumerKey&quot; /&gt;<br>
+&lt;add key=&quot;ConsumerSecret&quot; value=&quot;YourAppConsumerSecret&quot; /&gt;</p>
+<p><em><strong>Setup Database:</strong></em></p>
+<p>Publish the Database\tweetyzard.database project to a SQL server database and change the below key accordingly:</p>
+<p>&lt;add key=&quot;DbConnectionString&quot; value=&quot;data source=.;initial catalog=tweetyzard.database;integrated security=True&quot; /&gt;&nbsp;</p>
+<p><strong>Saving stream directly to database:</strong></p>
+<p>A new functionality has been added where we can directly save the streaming data in database without stopping the stream. To enable this feature download the source code from the source code tab and then turn &lt;add key=&quot;SaveStreamToDatabase&quot; value=&quot;false&quot;/&gt;
+ to true.</p>
+</div><div class="ClearBoth"></div>
